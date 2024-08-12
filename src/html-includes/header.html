@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Architect</title>
+  <title>intel-way</title>
 
   <script>
     window.maplocation = [45.219961, 39.222988]
@@ -13,3 +13,160 @@
 </head>
 
 <body>
+
+  <header class="header">
+    <div class="w-full order-9 my-2 border-t border-default/20 sm:hidden"></div>
+    <div class="flex items-center gap-5 max-sm:order-10">
+      <button class="btn btn-text lg:hidden" data-toggle-link="menu">
+        <c-icon class="icon text-2xl" href="/img/icons.svg#menu"></c-icon>
+      </button>
+      <a href="/" class="header-logo">
+        <img src="/img/logo.png" alt="">
+      </a>
+    </div>
+
+    <a href="javascript:;" class="btn btn-text gap-3 max-lg:hidden">
+      <div class="bg-[#CBDCDB] bg-gradient p-1.5 rounded-lg">
+        <c-icon class="icon text-xl text-white" href="/img/icons.svg#map-point"></c-icon>
+      </div>
+      <div class="font-medium">
+        г. Краснодар, ул. Селезнева, д.203, оф. 36/8
+      </div>
+    </a>
+
+    <a href="javascript:;" class="btn btn-text gap-3 max-lg:hidden">
+      <div class="bg-[#CBDCDB] bg-gradient p-1.5 rounded-lg">
+        <c-icon class="icon text-xl text-white" href="/img/icons.svg#email"></c-icon>
+      </div>
+      <div class="font-medium">
+        manager@intel-way.ru
+      </div>
+    </a>
+
+    <%= require('./header-soc.html')() %>
+
+    <a href="javascript:;" class="btn btn-text hover-underline">
+      <span class="font-bold text-xl sm:text-2xl">8 800 100 86 76</span>
+    </a>
+  </header>
+
+  <div class="menu " id="menu">
+    <div class="py-3 sticky z-1 top-0 bg-l3 border-b border-default/20">
+      <div class="flex px-4 justify-between">
+        <%= require('./header-soc.html')() %>
+
+        <a href="javascript:;" class="btn btn-text hover-underline">
+          <span class="font-bold text-xl sm:text-2xl">8 800 100 86 76</span>
+        </a>
+      </div>
+      <div class="w-full  my-2 border-t border-default/20"></div>
+      <div class="flex items-center gap-5 px-4">
+        <button class="btn btn-text " data-toggle-link="menu">
+          <c-icon class="icon text-2xl" href="/img/icons.svg#cross-circle"></c-icon>
+        </button>
+        <a href="/" class="header-logo">
+          <img src="/img/logo.png" alt="">
+        </a>
+      </div>
+    </div>
+    <div class="py-4 px-4 flex flex-col gap-0.5">
+      <div class="text-2xl font-semibold mb-4">Продукты и услуги</div>
+
+      <% for(let i = 0; i < 10; i++) { %>
+      <a href=" javascript:;" class="btn btn-primary btn-sm hover-underline gap-3 justify-start px-3 -mx-3">
+        <span class="text-default">Продукты 1С</span>
+      </a>
+      <% } %>
+
+      <div class="w-full my-4 border-t border-default/20"></div>
+
+      <a href=" javascript:;" class="btn btn-primary btn-sm hover-underline gap-3 justify-start px-3 -mx-3">
+        <c-icon class="icon text-2xl text-yellow" href="/img/icons.svg#sale"></c-icon>
+        <span class="text-lg font-semibold text-default">Акции</span>
+      </a>
+      <a href="javascript:;" class="btn btn-primary btn-sm hover-underline gap-3 justify-start px-3 -mx-3">
+        <span class="text-lg font-semibold text-default">Портфолио</span>
+      </a>
+      <a href="javascript:;" class="btn btn-primary btn-sm hover-underline gap-3 justify-start px-3 -mx-3">
+        <span class="text-lg font-semibold text-default">Партнерам</span>
+      </a>
+      <a href="javascript:;" class="btn btn-primary btn-sm hover-underline gap-3 justify-start px-3 -mx-3">
+        <span class="text-lg font-semibold text-default">Клиентам</span>
+      </a>
+      <a href="javascript:;" class="btn btn-primary btn-sm hover-underline gap-3 justify-start px-3 -mx-3">
+        <span class="text-lg font-semibold text-default">Контакты</span>
+      </a>
+
+      <div class="w-full my-4 border-t border-default/20"></div>
+
+      <div class="text-2xl font-semibold mb-4">Контакты</div>
+
+      <div class="flex flex-col gap-4">
+        <a href="javascript:;" class="btn btn-text gap-3 justify-start">
+          <div class="bg-primary bg-gradient p-1.5 rounded-lg">
+            <c-icon class="icon text-xl text-white" href="/img/icons.svg#map-point"></c-icon>
+          </div>
+          <div class="font-medium">
+            г. Краснодар, ул. Селезнева, д.203, оф. 36/8
+          </div>
+        </a>
+        <a href="javascript:;" class="btn btn-text gap-3 justify-start">
+          <div class="bg-primary bg-gradient p-1.5 rounded-lg">
+            <c-icon class="icon text-xl text-white" href="/img/icons.svg#smartphone"></c-icon>
+          </div>
+          <div class="font-bold text-2xl">
+            8 (800) 100-86-76
+          </div>
+        </a>
+        <a href="javascript:;" class="btn btn-text gap-3 justify-start">
+          <div class="bg-primary bg-gradient p-1.5 rounded-lg">
+            <c-icon class="icon text-xl text-white" href="/img/icons.svg#email"></c-icon>
+          </div>
+          <div class="font-medium">
+            manager@intel-way.ru
+          </div>
+        </a>
+
+        <%= require('./header-soc.html')() %>
+      </div>
+    </div>
+  </div>
+  <div class="menu-shadow"></div>
+
+  <section class="nav max-lg:hidden">
+    <c-menu>
+      <c-menu-button href="javascript:;" class="btn btn-primary btn-text hover-underline gap-3">
+        <div class="absolute -inset-5"></div>
+        <c-icon class="icon text-2xl text-default" href="/img/icons.svg#menu"></c-icon>
+        <span class="text-lg font-semibold text-default">Продукты и услуги</span>
+      </c-menu-button>
+      <c-menu-items class="flex flex-col gap-0.5 p-2 max-sm:py-6">
+        <% for(let i = 0; i < 10; i++) { %>
+        <a href="javascript:;" class="btn btn-primary btn-xs justify-start">
+          <span class="text-default">Продукты 1С</span>
+        </a>
+        <% } %>
+      </c-menu-items>
+    </c-menu>
+    <a href="javascript:;" class="btn btn-primary btn-text hover-underline gap-3">
+      <div class="absolute -inset-5"></div>
+      <c-icon class="icon text-2xl text-yellow" href="/img/icons.svg#sale"></c-icon>
+      <span class="text-lg font-semibold text-default">Акции</span>
+    </a>
+    <a href="javascript:;" class="btn btn-primary btn-text hover-underline gap-3">
+      <div class="absolute -inset-5"></div>
+      <span class="text-lg font-semibold text-default">Портфолио</span>
+    </a>
+    <a href="javascript:;" class="btn btn-primary btn-text hover-underline gap-3">
+      <div class="absolute -inset-5"></div>
+      <span class="text-lg font-semibold text-default">Партнерам</span>
+    </a>
+    <a href="javascript:;" class="btn btn-primary btn-text hover-underline gap-3">
+      <div class="absolute -inset-5"></div>
+      <span class="text-lg font-semibold text-default">Клиентам</span>
+    </a>
+    <a href="javascript:;" class="btn btn-primary btn-text hover-underline gap-3">
+      <div class="absolute -inset-5"></div>
+      <span class="text-lg font-semibold text-default">Контакты</span>
+    </a>
+  </section>

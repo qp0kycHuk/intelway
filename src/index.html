@@ -1,5 +1,370 @@
 <%= require('./html-includes/header.html')() %>
 
-<div class="doc"></div>
+
+<section class="started">
+  <div class="started-content">
+    <div class="started-title">
+      Автоматизация <br>
+      бизнеса с INTELWAY
+    </div>
+    <div class="mt-8">
+      <c-icon class="icon text-2xl inline-block align-middle text-yellow" href="img/icons.svg#1c"></c-icon>
+      <span class="font-medium">Управляйте своим бизнесом на новом уровне</span>
+    </div>
+
+    <div class="mt-15">
+      <button class="btn btn-primary btn-whitebg">
+        <span class="uppercase font-semibold">СВЯЗАТЬСЯ С НАМИ</span>
+      </button>
+    </div>
+    <div class="flex mt-auto gap-8 sm:gap-12">
+      <div>
+        <div class="text-4.5xl sm:text-[54px] font-bold">
+          9+
+        </div>
+        <div class="max-sm:text-sm">
+          лет опыта <br>
+          автоматизации
+        </div>
+      </div>
+      <div>
+        <div class="text-4.5xl sm:text-[54px] font-bold">
+          1С
+        </div>
+        <div class="max-sm:text-sm">
+          официальный <br>
+          партнер
+        </div>
+      </div>
+      <div>
+        <div class="text-4.5xl sm:text-[54px] font-bold">
+          800
+        </div>
+        <div class="max-sm:text-sm">
+          довольных <br>
+          клиентов
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Мы оказываем следующие услуги -->
+<section class="p-section bg-l3">
+  <div class="title mb-6 sm:mb-10">Мы оказываем следующие услуги</div>
+  <div class="grid grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-7">
+    <% for(let i = 0; i < 6; i++) { %>
+    <div class="service-item">
+      <div class="ratio ratio-[390/214]">
+        <img src="img/test.gif" alt="" class="absolute-fit object-cover">
+      </div>
+      <div class="p-4 lg:p-7 service-item-content">
+        <div class="text-center sm:text-2xl font-semibold">
+          Реальная автоматизация
+        </div>
+
+        <div class="mt-3"></div>
+        <button class="btn btn-primary btn-whitebg mt-auto mx-auto border border-default/10 shadow-md max-sm:w-full">
+          <span class="uppercase font-semibold text-default">подробнее <span class="max-sm:hidden">об услуге</span></span>
+        </button>
+      </div>
+    </div>
+
+    <% } %>
+  </div>
+</section>
+
+<!-- Программные продукты -->
+<section class="p-section overflow-hidden">
+  <div class="title mb-6 sm:mb-10">Программные продукты</div>
+  <div class="relative">
+    <div class="products-slider swiper -mx-2 lg:-mx-3 max-md:overflow-visible">
+      <div class="swiper-wrapper">
+        <% for(let i = 0; i < 10; i++) { %>
+        <div class="swiper-slide px-2 lg:px-3 w-52 md:w-1/3 lg:w-1/4">
+          <div class="service-item">
+            <div class="ratio ratio-[290/210]">
+              <img src="img/test.gif" alt="" class="absolute-fit object-cover">
+            </div>
+            <div class="p-4 lg:p-7 service-item-content">
+              <div class="sm:text-lg/xs font-semibold">
+                1С: Зарплата и управление
+                персоналом
+              </div>
+
+              <div class="mt-6"></div>
+              <button class="btn btn-primary btn-whitebg mt-auto border border-default/10 shadow-md max-sm:w-full self-start">
+                <span class="uppercase font-semibold text-default">подробнее</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </div>
+
+    <div class="absolute right-full top-1/2 -translate-y-1/2 mr-6 max-md:hidden">
+      <button class="btn btn-primary btn-whitebg mt-auto border border-default/10 rounded-full shadow-md btn-icon products-slider-prev">
+        <c-icon class="icon" href="img/icons.svg#to-left"></c-icon>
+      </button>
+    </div>
+    <div class="absolute left-full top-1/2 -translate-y-1/2 ml-6 max-md:hidden">
+      <button class="btn btn-primary btn-whitebg mt-auto border border-default/10 rounded-full shadow-md btn-icon products-slider-next">
+        <c-icon class="icon" href="img/icons.svg#to-right"></c-icon>
+      </button>
+    </div>
+  </div>
+</section>
+<script>
+  new Swiper('.products-slider', {
+    slidesPerView: 'auto',
+    navigation: {
+      prevEl: '.products-slider-prev',
+      nextEl: '.products-slider-next',
+    }
+  })
+</script>
+
+<!-- С нами комфортно -->
+<section class="p-section bg-l3">
+  <div class="title mb-6 sm:mb-10">С нами комфортно</div>
+
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-6">
+    <% for(let i = 0; i < 8; i++) { %>
+    <div class="category-item">
+      <div class="category-item-image">
+        <img src="img/category-sempl.svg" alt="" class="icon">
+      </div>
+      <div class="category-item-content">
+        <div class="sm:text-lg font-bold mb-1 sm:mb-3 leading-xs">Глобальная автоматизация</div>
+        <div class="max-sm:text-xs">
+          Оказываем полный спектр
+          услуг от 1С до ККМ
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</section>
+
+<!-- Мы предлагаем -->
+<section class="p-section">
+  <div class="title mb-6 sm:mb-10">Мы предлагаем</div>
+
+  <div class="offer-grid">
+    <div class="offer-item offer-item-bitrix">
+      <img src="img/offer/bitrix.png" alt="" class="m-auto">
+      <div class="offer-item-content">
+        <div class="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-5">Продукты Битрикс</div>
+        <button class="btn btn-primary btn-whitebg border border-default/10 shadow-md max-sm:w-full">
+          <span class="uppercase font-semibold text-default">смотреть продукцию</span>
+        </button>
+      </div>
+    </div>
+    <div class="offer-item sm:row-span-2 offer-item-1c">
+      <picture>
+        <source media="(min-width: 609.98px)" srcset="img/offer/1c.png">
+        <img src="img/offer/1c-sm.png" alt="" class="absolute max-sm:left-1/2 max-sm:-translate-x-1/2 sm:right-0 top-0 sm:top-3">
+      </picture>
+      <div class="offer-item-content">
+        <div class="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-5">Продукты 1С</div>
+        <button class="btn btn-primary btn-whitebg border border-default/10 shadow-md max-sm:w-full">
+          <span class="uppercase font-semibold text-default">смотреть продукцию</span>
+        </button>
+      </div>
+    </div>
+    <div class="offer-item offer-item-virus">
+      <img src="img/offer/virus.jpg" alt="" class="absolute-fit">
+      <div class="offer-item-content">
+        <div class="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-5">Антивирусы</div>
+        <button class="btn btn-primary btn-whitebg border border-default/10 shadow-md max-sm:w-full">
+          <span class="uppercase font-semibold text-default">смотреть продукцию</span>
+        </button>
+      </div>
+    </div>
+    <div class="offer-item offer-item-equipment">
+      <img src="img/offer/equipment.png" alt="" class="absolute left-0 top-0">
+      <div class="offer-item-content">
+        <div class="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-5">Торговое оборудование</div>
+        <button class="btn btn-primary btn-whitebg border border-default/10 shadow-md max-sm:w-full">
+          <span class="uppercase font-semibold text-default">смотреть продукцию</span>
+        </button>
+      </div>
+    </div>
+    <div class="offer-item offer-item-other">
+      <img src="img/offer/other.jpg" alt="" class="absolute-fit">
+      <div class="offer-item-content">
+        <div class="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-5">Другое ПО</div>
+        <button class="btn btn-primary btn-whitebg border border-default/10 shadow-md max-sm:w-full">
+          <span class="uppercase font-semibold text-default">смотреть продукцию</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Портфолио -->
+<section class="p-section bg-l3 overflow-hidden">
+  <div class="title mb-6 sm:mb-10">Портфолио</div>
+
+  <div class="relative">
+    <div class="portfolio-slider swiper -mx-2 md:-mx-3.5 max-md:overflow-visible">
+      <div class="swiper-wrapper">
+        <% for(let i = 0; i < 10; i++) { %>
+        <div class="swiper-slide w-60 md:w-1/2 lg:w-1/3 px-2 md:px-3.5">
+          <div class="portfolio-item">
+            <div class="portfolio-item-image">
+              <img src="img/portfolio-sempl.png" alt="">
+            </div>
+            <div class="portfolio-item-content">
+              <div class="md:text-lg font-bold">
+                Разработка приложения и внедрение
+                CRM системы
+              </div>
+
+              <div class="mt-auto"></div>
+              <button class="btn btn-primary btn-whitebg border border-default/10 shadow-md max-sm:w-full mt-6">
+                <span class="uppercase font-semibold text-default">подробнее</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </div>
+
+    <div class="absolute right-full top-1/2 -translate-y-1/2 mr-6 max-md:hidden">
+      <button class="btn btn-primary btn-whitebg mt-auto border border-default/10 rounded-full shadow-md btn-icon portfolio-slider-prev">
+        <c-icon class="icon" href="img/icons.svg#to-left"></c-icon>
+      </button>
+    </div>
+    <div class="absolute left-full top-1/2 -translate-y-1/2 ml-6 max-md:hidden">
+      <button class="btn btn-primary btn-whitebg mt-auto border border-default/10 rounded-full shadow-md btn-icon portfolio-slider-next">
+        <c-icon class="icon" href="img/icons.svg#to-right"></c-icon>
+      </button>
+    </div>
+  </div>
+
+  <div class="flex mt-8">
+    <button class="btn btn-primary btn-fill mx-auto">
+      <span class="uppercase font-semibold">ПОКАЗАТЬ ВСЕ</span>
+    </button>
+  </div>
+</section>
+<script>
+  new Swiper('.portfolio-slider', {
+    slidesPerView: 'auto',
+    navigation: {
+      prevEl: '.portfolio-slider-prev',
+      nextEl: '.portfolio-slider-next',
+    }
+  })
+</script>
+
+<!-- Оставьте заявку -->
+<section class="pray">
+  <div class="pray-form">
+    <div class="text-center font-semibold text-4xl mb-6">
+      Оставьте заявку
+    </div>
+    <div class="flex flex-col gap-4">
+      <label class="block">
+        <div class="mb-2 font-semibold">Ваше имя</div>
+        <input type="text" class="input w-full">
+      </label>
+      <label class="block">
+        <div class="mb-2 font-semibold">Ваш телефон</div>
+        <input type="tel" class="input w-full" placeholder="">
+      </label>
+      <label class="block">
+        <div class="mb-2 font-semibold">Что вас интересует</div>
+        <input type="text" class="input w-full">
+      </label>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-fill w-full mt-8">
+      <span class="uppercase font-semibold">отправить</span>
+    </button>
+
+    <a href="javascript:;" class="mt-8 text-center hover:underline opacity-60 text-xs text-white block">
+      Отправляя форму, Вы даете согласие на обработку <br>
+      Ваших персональных данных
+    </a>
+  </div>
+</section>
+
+<!-- Наши клиенты -->
+<section class="p-section bg-l3 overflow-hidden">
+  <div class="title mb-6 sm:mb-10">Наши клиенты</div>
+
+
+  <div class="relative">
+    <div class="client-slider swiper -mx-2 md:-mx-3 max-md:overflow-visible">
+      <div class="swiper-wrapper">
+        <% for(let i = 0; i < 10; i++) { %>
+        <div class="swiper-slide w-52 md:w-1/3 lg:w-1/4 px-2 md:px-3">
+          <div class="client-item ratio ratio-[190/150] md:ratio-1/1">
+            <div class="client-item-image absolute-fit">
+              <img src="img/portfolio-sempl.png" alt="">
+            </div>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </div>
+
+    <div class="absolute right-full top-1/2 -translate-y-1/2 mr-6 max-md:hidden">
+      <button class="btn btn-primary btn-whitebg mt-auto border border-default/10 rounded-full shadow-md btn-icon client-slider-prev">
+        <c-icon class="icon" href="img/icons.svg#to-left"></c-icon>
+      </button>
+    </div>
+    <div class="absolute left-full top-1/2 -translate-y-1/2 ml-6 max-md:hidden">
+      <button class="btn btn-primary btn-whitebg mt-auto border border-default/10 rounded-full shadow-md btn-icon client-slider-next">
+        <c-icon class="icon" href="img/icons.svg#to-right"></c-icon>
+      </button>
+    </div>
+  </div>
+  <div class="relative mt-8">
+    <div class="client-slider-pagination slider-pagination py-8"></div>
+  </div>
+</section>
+<script>
+  new Swiper('.client-slider', {
+    slidesPerView: 'auto',
+    navigation: {
+      prevEl: '.client-slider-prev',
+      nextEl: '.client-slider-next',
+    },
+    pagination: {
+      el: '.client-slider-pagination',
+      clickable: true,
+      dynamicBullets: true
+    }
+  })
+</script>
+
+<script>
+  window.maplocation = [45.035469, 38.975309]
+</script>
+<div class="map" id="map"></div>
+
+<footer class="footer">
+  <div class="footer-info">
+    <div class="flex gap-8 items-center">
+      <img src="img/logo-white.png" alt="" class="footer-logo">
+      <img src="img/1c-franchize.png" alt="">
+    </div>
+    <div class="mt-8 font-semibold text-sm">
+      Специалисты компании IntelWay с 2025 года
+      занимаются внедрением систем учета и управления
+      предприятием
+    </div>
+    <div class="mt-6 text-sm">
+      Уже 9 лет мы работаем для того, чтобы с помощью
+      программных продуктов 1С делать более простым
+      и эффективным труд специалистов различного спектра
+    </div>
+  </div>
+</footer>
 
 <%= require('./html-includes/footer.html')() %>

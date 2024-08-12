@@ -1,7 +1,7 @@
 const elementsSizes = {
-  xs: '24px',
-  sm: '32px',
-  base: '42px',
+  xs: '30px',
+  sm: '40px',
+  base: '50px',
   lg: '52px',
   xl: '64px',
 }
@@ -71,6 +71,14 @@ module.exports = {
         '3.5xl': ['2rem', '1.35'],
         '4.5xl': ['2.5rem', '1.35'],
       },
+      lineHeight: {
+        xs: 1.15
+      },
+      boxShadow: {
+        md: '0 3px 1px 0 #0000000A, 0 3px 8px 0 #0000000F'
+
+
+      }
     },
   },
   plugins: [

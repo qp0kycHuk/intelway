@@ -12,7 +12,7 @@ function mapsInit() {
   if (mapInited) return
   mapInited = true
 
-  if (document.getElementById('contact-map')) {
+  if (document.getElementById('map')) {
     ymaps.load('https://api-maps.yandex.ru/2.1/?lang=ru_RU').then((maps: any) => {
       const coords = window.maplocation
       // const center = [coords[0], coords[1]]
@@ -22,16 +22,16 @@ function mapsInit() {
         zoom: 17,
       }
 
-      const map = new maps.Map('contact-map', options)
+      const map = new maps.Map('map', options)
 
       const placemark = new maps.Placemark(
         coords,
         {},
         {
           iconLayout: 'default#image',
-          iconImageHref: '/img/map-point.svg',
-          iconImageSize: [100, 100],
-          iconImageOffset: [-(100 / 2), -100],
+          iconImageHref: '/img/map-point.png',
+          iconImageSize: [116, 116],
+          iconImageOffset: [-(116 / 2), -116],
           hasBalloon: true,
           openBalloonOnClick: true,
           hideIconOnBalloonOpen: false,
