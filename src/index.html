@@ -1,10 +1,10 @@
 <%= require('./html-includes/header.html')() %>
 
 
-<div class="started-slider swiper w-full relative">
+<section class="started-slider swiper w-full relative p-0">
   <div class="swiper-wrapper">
     <div class="swiper-slide w-full">
-      <section class="started">
+      <div class="started section">
         <div class="absolute-fit overflow-hidden">
           <!-- started-gradient -->
           <div class="absolute-fit" style="background: linear-gradient(100deg, rgba(29, 140, 136, 0) 0%, rgba(8, 225, 217, 0.7) 100%),#196C69;"></div>
@@ -28,10 +28,10 @@
           <%= require('./html-includes/started-button.html')() %>
           <%= require('./html-includes/started-digits.html')() %>
         </div>
-      </section>
+      </div>
     </div>
     <div class="swiper-slide w-full">
-      <section class="started">
+      <div class="started section">
         <div class=" absolute-fit overflow-hidden">
           <!-- started-gradient -->
           <div class="absolute-fit" style="background: linear-gradient(278deg, rgba(0, 0, 0, 0) 39.91%, rgba(0, 0, 0, 0.2) 100%),#EA6146;"></div>
@@ -55,10 +55,10 @@
           <%= require('./html-includes/started-button.html')() %>
           <%= require('./html-includes/started-digits.html')() %>
         </div>
-      </section>
+      </div>
     </div>
     <div class="swiper-slide w-full">
-      <section class="started">
+      <div class="started section">
         <div class=" absolute-fit overflow-hidden">
           <!-- started-gradient -->
           <div class="absolute-fit" style="background: linear-gradient(116.57deg, #C04549 16.67%, #E8BB47 100%);"></div>
@@ -86,13 +86,13 @@
           <%= require('./html-includes/started-button.html')() %>
           <%= require('./html-includes/started-digits.html')() %>
         </div>
-      </section>
+      </div>
     </div>
   </div>
 
   <div class="started-pagination slider-pagination"></div>
 
-</div>
+</section>
 <script>
   new Swiper('.started-slider', {
     slidesPerView: 'auto',
@@ -120,7 +120,7 @@
   <div class="title mb-6 sm:mb-10">Мы оказываем следующие услуги</div>
   <div class="grid grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-7">
     <% for(let i = 0; i < 6; i++) { %>
-    <div class="service-item">
+    <a href="javascript:;" class="service-item btn-group">
       <div class="ratio ratio-[390/214]">
         <img src="img/test.gif" alt="" class="absolute-fit object-cover">
       </div>
@@ -131,10 +131,10 @@
 
         <div class="mt-3"></div>
         <button class="btn btn-primary btn-whitebg mt-auto mx-auto border border-default/10 shadow-md max-sm:w-full">
-          <span class="uppercase font-semibold text-default">подробнее <span class="max-sm:hidden">об услуге</span></span>
+          <span class="uppercase font-semibold ">подробнее <span class="max-sm:hidden">об услуге</span></span>
         </button>
       </div>
-    </div>
+    </a>
 
     <% } %>
   </div>
@@ -148,7 +148,7 @@
       <div class="swiper-wrapper">
         <% for(let i = 0; i < 10; i++) { %>
         <div class="swiper-slide px-2 lg:px-3 w-52 md:w-1/3 lg:w-1/4">
-          <div class="service-item">
+          <a href="javascript:;" class="service-item btn-group">
             <div class="ratio ratio-[290/210]">
               <img src="img/test.gif" alt="" class="absolute-fit object-cover">
             </div>
@@ -160,10 +160,10 @@
 
               <div class="mt-6"></div>
               <button class="btn btn-primary btn-whitebg mt-auto border border-default/10 shadow-md max-sm:w-full self-start">
-                <span class="uppercase font-semibold text-default">подробнее</span>
+                <span class="uppercase font-semibold ">подробнее</span>
               </button>
             </div>
-          </div>
+          </a>
         </div>
         <% } %>
       </div>
@@ -179,6 +179,11 @@
         <c-icon class="icon" href="img/icons.svg#to-right"></c-icon>
       </button>
     </div>
+  </div>
+  <div class="flex mt-8">
+    <button class="btn btn-primary btn-fill sm:mx-auto">
+      <span class="uppercase font-semibold">ПОКАЗАТЬ ВСЕ</span>
+    </button>
   </div>
 </section>
 <script>
@@ -218,16 +223,16 @@
   <div class="title mb-6 sm:mb-10">Мы предлагаем</div>
 
   <div class="offer-grid">
-    <div class="offer-item offer-item-bitrix">
+    <a href="javascript:;" class="offer-item offer-item-bitrix btn-group">
       <img src="img/offer/bitrix.png" alt="" class="m-auto">
       <div class="offer-item-content">
         <div class="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-5">Продукты Битрикс</div>
         <button class="btn btn-primary btn-whitebg border border-default/10 shadow-md max-sm:w-full">
-          <span class="uppercase font-semibold text-default">смотреть продукцию</span>
+          <span class="uppercase font-semibold">смотреть продукцию</span>
         </button>
       </div>
-    </div>
-    <div class="offer-item sm:row-span-2 offer-item-1c">
+    </a>
+    <a href="javascript:;" class="offer-item sm:row-span-2 offer-item-1c btn-group">
       <picture>
         <source media="(min-width: 609.98px)" srcset="img/offer/1c.png">
         <img src="img/offer/1c-sm.png" alt="" class="absolute max-sm:left-1/2 max-sm:-translate-x-1/2 sm:right-0 top-0 sm:top-3">
@@ -235,37 +240,37 @@
       <div class="offer-item-content">
         <div class="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-5">Продукты 1С</div>
         <button class="btn btn-primary btn-whitebg border border-default/10 shadow-md max-sm:w-full">
-          <span class="uppercase font-semibold text-default">смотреть продукцию</span>
+          <span class="uppercase font-semibold">смотреть продукцию</span>
         </button>
       </div>
-    </div>
-    <div class="offer-item offer-item-virus">
+    </a>
+    <a href="javascript:;" class="offer-item offer-item-virus btn-group">
       <img src="img/offer/virus.jpg" alt="" class="absolute-fit">
       <div class="offer-item-content">
         <div class="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-5">Антивирусы</div>
         <button class="btn btn-primary btn-whitebg border border-default/10 shadow-md max-sm:w-full">
-          <span class="uppercase font-semibold text-default">смотреть продукцию</span>
+          <span class="uppercase font-semibold">смотреть продукцию</span>
         </button>
       </div>
-    </div>
-    <div class="offer-item offer-item-equipment">
+    </a>
+    <a href="javascript:;" class="offer-item offer-item-equipment btn-group">
       <img src="img/offer/equipment.png" alt="" class="absolute left-0 top-0">
       <div class="offer-item-content">
         <div class="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-5">Торговое оборудование</div>
         <button class="btn btn-primary btn-whitebg border border-default/10 shadow-md max-sm:w-full">
-          <span class="uppercase font-semibold text-default">смотреть продукцию</span>
+          <span class="uppercase font-semibold">смотреть продукцию</span>
         </button>
       </div>
-    </div>
-    <div class="offer-item offer-item-other">
+    </a>
+    <a href="javascript:;" class="offer-item offer-item-other btn-group">
       <img src="img/offer/other.jpg" alt="" class="absolute-fit">
       <div class="offer-item-content">
         <div class="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-5">Другое ПО</div>
         <button class="btn btn-primary btn-whitebg border border-default/10 shadow-md max-sm:w-full">
-          <span class="uppercase font-semibold text-default">смотреть продукцию</span>
+          <span class="uppercase font-semibold">смотреть продукцию</span>
         </button>
       </div>
-    </div>
+    </a>
   </div>
 </section>
 
@@ -278,7 +283,7 @@
       <div class="swiper-wrapper">
         <% for(let i = 0; i < 10; i++) { %>
         <div class="swiper-slide w-60 md:w-1/2 lg:w-1/3 px-2 md:px-3.5">
-          <div class="portfolio-item">
+          <a href="javascript:;" class="portfolio-item btn-group">
             <div class="portfolio-item-image">
               <img src="img/portfolio-sempl.png" alt="">
             </div>
@@ -290,10 +295,10 @@
 
               <div class="mt-auto"></div>
               <button class="btn btn-primary btn-whitebg border border-default/10 shadow-md max-sm:w-full mt-6">
-                <span class="uppercase font-semibold text-default">подробнее</span>
+                <span class="uppercase font-semibold">подробнее</span>
               </button>
             </div>
-          </div>
+          </a>
         </div>
         <% } %>
       </div>
@@ -312,7 +317,7 @@
   </div>
 
   <div class="flex mt-8">
-    <button class="btn btn-primary btn-fill mx-auto">
+    <button class="btn btn-primary btn-fill sm:mx-auto">
       <span class="uppercase font-semibold">ПОКАЗАТЬ ВСЕ</span>
     </button>
   </div>
@@ -414,23 +419,6 @@
 </script>
 <div class="map" id="map"></div>
 
-<footer class="footer">
-  <div class="footer-info">
-    <div class="flex gap-8 items-center">
-      <img src="img/logo-white.png" alt="" class="footer-logo">
-      <img src="img/1c-franchize.png" alt="">
-    </div>
-    <div class="mt-8 font-semibold text-sm">
-      Специалисты компании IntelWay с 2025 года
-      занимаются внедрением систем учета и управления
-      предприятием
-    </div>
-    <div class="mt-6 text-sm">
-      Уже 9 лет мы работаем для того, чтобы с помощью
-      программных продуктов 1С делать более простым
-      и эффективным труд специалистов различного спектра
-    </div>
-  </div>
-</footer>
+
 
 <%= require('./html-includes/footer.html')() %>

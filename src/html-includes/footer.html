@@ -1,3 +1,81 @@
+<footer class="footer px-0">
+  <div class="footer-inner section">
+    <div class="footer-info">
+      <div class="flex gap-8 items-center">
+        <img src="/img/logo-white.png" alt="" class="footer-logo">
+        <img src="/img/1c-franchize.png" alt="">
+      </div>
+      <div class="mt-6 sm:mt-8 opacity-60 font-semibold text-xs sm:text-sm">
+        Специалисты компании IntelWay с 2025 года
+        занимаются внедрением систем учета и управления
+        предприятием
+      </div>
+      <div class="mt-4 sm:mt-6 opacity-60 text-xs sm:text-sm">
+        Уже 9 лет мы работаем для того, чтобы с помощью
+        программных продуктов 1С делать более простым
+        и эффективным труд специалистов различного спектра
+      </div>
+    </div>
+    <div class="footer-nav max-lg:hidden">
+      <div class="text-2xl font-semibold mb-8">Услуги</div>
+      <div class="flex flex-col gap-4 items-start">
+        <% for(let i = 0; i < 7; i++) { %>
+        <a href="javascript:;" class="btn btn-text footer-link hover-underline relative">
+          <div class="absolute -inset-2"></div>
+          <span>Реальная автоматизация</span>
+        </a>
+        <% } %>
+      </div>
+    </div>
+    <div class="footer-nav max-lg:hidden">
+      <div class="text-2xl font-semibold mb-8">Продукция</div>
+      <div class="flex flex-col gap-4 items-start">
+        <% for(let i = 0; i < 5; i++) { %>
+        <a href="javascript:;" class="btn btn-text footer-link hover-underline relative">
+          <div class="absolute -inset-2"></div>
+          <span>Продукты Microsoft</span>
+        </a>
+        <% } %>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <div class="text-2xl font-semibold mb-4 sm:mb-8">Контакты</div>
+      <div class="flex flex-col gap-4 items-start mb-8">
+        <a href="javascript:;" class="btn btn-text gap-3 justify-start">
+          <div class="bg-sec bg-gradient p-1.5 rounded-lg">
+            <c-icon class="icon text-xl text-white" href="/img/icons.svg#map-point"></c-icon>
+          </div>
+          <div class="">
+            г. Краснодар, ул. Селезнёва, 203
+            2 этаж, офис 36/8
+          </div>
+        </a>
+        <a href="javascript:;" class="btn btn-text gap-3 justify-start">
+          <div class="bg-sec bg-gradient p-1.5 rounded-lg">
+            <c-icon class="icon text-xl text-white" href="/img/icons.svg#smartphone"></c-icon>
+          </div>
+          <div class="font-bold text-2xl">
+            8 (800) 100-86-76
+          </div>
+        </a>
+        <a href="javascript:;" class="btn btn-text gap-3 justify-start">
+          <div class="bg-sec bg-gradient p-1.5 rounded-lg">
+            <c-icon class="icon text-xl text-white" href="/img/icons.svg#email"></c-icon>
+          </div>
+          <div class="font-medium">
+            manager@intel-way.ru
+          </div>
+        </a>
+
+      </div>
+      <%= require('./header-soc.html')() %>
+    </div>
+  </div>
+  <div class="footer-bottom section py-3 bg-primary">
+    <span class="max-sm:text-xs">intel-way.ru© 2015-2024. <br class="sm:hidden"> ООО "Интелвэй" Сертифицированный партнер 1С</span>
+  </div>
+</footer>
+
 </body>
 
 </html>

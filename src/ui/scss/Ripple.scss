@@ -1,19 +1,37 @@
 @layer base {
-  .ripple {
-    background: radial-gradient(rgba(0, 0, 0, 0.1) 0,
+  :root {
+    --ripple-dark: radial-gradient(rgba(0, 0, 0, 0.1) 0,
         rgba(0, 0, 0, 0.2) 40%,
         rgba(0, 0, 0, 0.2) calc(60% - 10px),
         rgba(0, 0, 0, 0.2) 60%,
         rgba(0, 0, 0, 0) calc(60% + 10px));
-
-  }
-
-  .btn-fill:not(.btn-l3) .ripple {
-    background: radial-gradient(rgba(255, 255, 255, 0.1) 0,
+    --ripple-light: radial-gradient(rgba(255, 255, 255, 0.1) 0,
         rgba(255, 255, 255, 0.2) 40%,
         rgba(255, 255, 255, 0.2) calc(60% - 10px),
         rgba(255, 255, 255, 0.2) 60%,
         rgba(0, 0, 0, 0) calc(60% + 10px));
+  }
 
+  .ripple {
+    background: var(--ripple-dark);
+
+  }
+
+  .btn-fill:not(.btn-l3) .ripple {
+    background: var(--ripple-light);
+
+  }
+
+  @media(hover) {
+    // temp
+
+    .btn-whitebg:is(.btn-group:hover .btn),
+    .btn-whitebg:is(.btn-peer:hover~.btn),
+    .btn-whitebg:hover {
+      .ripple {
+        background: var(--ripple-light);
+
+      }
+    }
   }
 }
