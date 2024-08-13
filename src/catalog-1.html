@@ -1,6 +1,24 @@
 <%= require('./html-includes/header.html')() %>
+<%= require('./html-includes/breadcrumps.html')() %>
 
+<section class="p-section bg-l3 pt-5">
 
+  <div class="title mb-6 sm:mb-10">Продукты и услуги</div>
+
+  <div class="font-semibold text-xl sm:text-3.5xl mb-4 sm:mb-7 opacity-60">Продукты</div>
+  <div class="grid grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-7">
+    <% for(let i = 0; i < 5; i++) { %>
+    <%= require('./html-includes/service-item.html')() %>
+    <% } %>
+  </div>
+
+  <div class="font-semibold text-xl sm:text-3.5xl mb-4 sm:mb-7 opacity-60 mt-10">Услуги</div>
+  <div class="grid grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-7">
+    <% for(let i = 0; i < 6; i++) { %>
+    <%= require('./html-includes/service-item.html')() %>
+    <% } %>
+  </div>
+</section>
 
 <%= require('./html-includes/map.html')() %>
 <%= require('./html-includes/footer.html')() %>
