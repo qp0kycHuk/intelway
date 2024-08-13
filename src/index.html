@@ -1,53 +1,119 @@
 <%= require('./html-includes/header.html')() %>
 
 
-<section class="started">
-  <div class="started-content">
-    <div class="started-title">
-      Автоматизация <br>
-      бизнеса с INTELWAY
-    </div>
-    <div class="mt-8">
-      <c-icon class="icon text-2xl inline-block align-middle text-yellow" href="img/icons.svg#1c"></c-icon>
-      <span class="font-medium">Управляйте своим бизнесом на новом уровне</span>
-    </div>
+<div class="started-slider swiper w-full relative">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide w-full">
+      <section class="started">
+        <div class="absolute-fit overflow-hidden">
+          <!-- started-gradient -->
+          <div class="absolute-fit" style="background: linear-gradient(100deg, rgba(29, 140, 136, 0) 0%, rgba(8, 225, 217, 0.7) 100%),#196C69;"></div>
 
-    <div class="mt-15">
-      <button class="btn btn-primary btn-whitebg">
-        <span class="uppercase font-semibold">СВЯЗАТЬСЯ С НАМИ</span>
-      </button>
+          <img src="img/started/lines.svg" alt="" class="started-lines">
+
+          <picture>
+            <source media="(min-width: 769.98px)" srcset="img/started/1.png">
+            <img src="img/started/1-sm.png" alt="" class="started-image">
+          </picture>
+        </div>
+        <div class="started-content">
+          <div class="started-title">
+            Автоматизация <br> бизнеса с INTELWAY
+          </div>
+          <div class="mt-6 md:mt-8 flex items-center gap-3">
+            <c-icon class="icon text-2xl inline-block align-middle text-yellow" href="img/icons.svg#1c"></c-icon>
+            <span class="font-medium max-sm:text-sm">Управляйте своим бизнесом на новом уровне</span>
+          </div>
+
+          <%= require('./html-includes/started-button.html')() %>
+          <%= require('./html-includes/started-digits.html')() %>
+        </div>
+      </section>
     </div>
-    <div class="flex mt-auto gap-8 sm:gap-12">
-      <div>
-        <div class="text-4.5xl sm:text-[54px] font-bold">
-          9+
+    <div class="swiper-slide w-full">
+      <section class="started">
+        <div class=" absolute-fit overflow-hidden">
+          <!-- started-gradient -->
+          <div class="absolute-fit" style="background: linear-gradient(278deg, rgba(0, 0, 0, 0) 39.91%, rgba(0, 0, 0, 0.2) 100%),#EA6146;"></div>
+
+          <img src="img/started/lines.svg" alt="" class="started-lines">
+
+          <picture>
+            <source media="(min-width: 769.98px)" srcset="img/started/2.png">
+            <img src="img/started/2-sm.png" alt="" class="started-image">
+          </picture>
         </div>
-        <div class="max-sm:text-sm">
-          лет опыта <br>
-          автоматизации
+        <div class="started-content">
+          <div class="started-title">
+            ИТС: УРЕЗАЕМ СЧЕТ <br> НА 1/3
+          </div>
+          <div class="mt-6 md:mt-8 flex items-center gap-3">
+            <c-icon class="icon text-2xl inline-block align-middle text-yellow" href="img/icons.svg#1c"></c-icon>
+            <span class="font-medium max-sm:text-sm">Управляйте своим бизнесом на новом уровне</span>
+          </div>
+
+          <%= require('./html-includes/started-button.html')() %>
+          <%= require('./html-includes/started-digits.html')() %>
         </div>
-      </div>
-      <div>
-        <div class="text-4.5xl sm:text-[54px] font-bold">
-          1С
+      </section>
+    </div>
+    <div class="swiper-slide w-full">
+      <section class="started">
+        <div class=" absolute-fit overflow-hidden">
+          <!-- started-gradient -->
+          <div class="absolute-fit" style="background: linear-gradient(116.57deg, #C04549 16.67%, #E8BB47 100%);"></div>
+
+          <img src="img/started/lines.svg" alt="" class="started-lines">
+
+          <picture>
+            <source media="(min-width: 769.98px)" srcset="img/started/3.png">
+            <img src="img/started/3-sm.png" alt="" class="started-image">
+          </picture>
         </div>
-        <div class="max-sm:text-sm">
-          официальный <br>
-          партнер
+        <div class="started-content">
+          <div class="started-title">
+            скидка до 50% <br> на программы 1с
+          </div>
+          <div class="mt-6 md:mt-8 max-sm:text-sm max-sm:hidden">
+            Скидка на такие программы, как:
+          </div>
+          <ul class="list-disc pl-5 max-sm:text-sm mt-3 max-sm:hidden">
+            <li>Бухгалтерия 8. Базовая версия</li>
+            <li>1С: Зарплата и Управление Персоналом 8. Базовая версия</li>
+            <li>1С: Управление торговлей 8. Базовая версия</li>
+          </ul>
+
+          <%= require('./html-includes/started-button.html')() %>
+          <%= require('./html-includes/started-digits.html')() %>
         </div>
-      </div>
-      <div>
-        <div class="text-4.5xl sm:text-[54px] font-bold">
-          800
-        </div>
-        <div class="max-sm:text-sm">
-          довольных <br>
-          клиентов
-        </div>
-      </div>
+      </section>
     </div>
   </div>
-</section>
+
+  <div class="started-pagination slider-pagination"></div>
+
+</div>
+<script>
+  new Swiper('.started-slider', {
+    slidesPerView: 'auto',
+    loop: true,
+    effect: "creative",
+    creativeEffect: {
+      prev: {
+        shadow: true,
+        translate: ["-20%", 0, -1],
+      },
+      next: {
+        translate: ["100%", 0, 0],
+      },
+    },
+    pagination: {
+      el: '.started-pagination',
+      clickable: true,
+      dynamicBullets: true
+    }
+  })
+</script>
 
 <!-- Мы оказываем следующие услуги -->
 <section class="p-section bg-l3">
@@ -325,7 +391,7 @@
     </div>
   </div>
   <div class="relative mt-8">
-    <div class="client-slider-pagination slider-pagination py-8"></div>
+    <div class="client-slider-pagination slider-pagination "></div>
   </div>
 </section>
 <script>
