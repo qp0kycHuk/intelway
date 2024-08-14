@@ -1,6 +1,41 @@
 <%= require('./html-includes/header.html')() %>
+<%= require('./html-includes/breadcrumps.html')() %>
+
+<section class="p-section bg-l3 pt-5">
+  <div class="title mb-6 sm:mb-10">Другое ПО</div>
+  <div class="catalog-preview mb-14">
+    <div class="catalog-preview-image ratio ratio-1/1">
+      <img src="img/test.gif" alt="" class="absolute-fit object-cover">
+    </div>
+    <div class="catalog-preview-content">
+      <div class="text-xl sm:text-3.5xl font-semibold mb-4 sm:mb-8">Другое ПО</div>
+      <div class="max-lg:text-sm">
+        Мы предлагаем услуги по настройке программного обеспечения для оптимизации рабочих
+        процессов и повышения эффективности бизнеса. Наши специалисты обладают высокой
+        квалификацией и опытом работы с популярными системами автоматизации и настройки ПО.
+        Мы предоставляем полный спектр услуг, включая аутсорсинг, внедрение и обслуживание
+        программных решений. Настройка ПО включает определение целей и требований
+        к программному обеспечению, анализ текущих бизнес-процессов, выявление проблемных
+        мест и выбор соответствующего программного обеспечения.
+      </div>
+      <button class="btn btn-primary btn-whitebg mt-8 border border-default/10 shadow-md max-sm:w-full">
+        <span class="uppercase font-semibold ">ЗАКАЗАТЬ</span>
+      </button>
+    </div>
+  </div>
 
 
+  <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-2 sm:gap-4">
+    <% for(let i = 0; i < 66; i++) { %>
+    <a href="javascript:;" class="client-item ratio ratio-[190/150] md:ratio-1/1 hover:border-primary">
+      <div class="client-item-image absolute-fit">
+        <img src="img/portfolio-sempl.png" alt="">
+      </div>
+    </a>
+    <% } %>
+  </div>
+</section>
 
+<%= require('./html-includes/pray.html')() %>
 <%= require('./html-includes/map.html')() %>
 <%= require('./html-includes/footer.html')() %>

@@ -588,23 +588,26 @@ body {
   }
 }
 
-.client {
-  &-item {
-    border       : 1px solid theme('colors.default / 20%');
-    border-radius: 32px;
+@layer components {
+  .client {
+    &-item {
+      border       : 1px solid theme('colors.default / 20%');
+      border-radius: 32px;
+      transition   : .25s ease;
 
-    @media (max-width: theme('screens.md')) {
-      border-radius: 24px;
-    }
+      @media (max-width: theme('screens.md')) {
+        border-radius: 24px;
+      }
 
-    &-image {
-      display        : flex;
-      align-items    : center;
-      justify-content: center;
-      padding        : 16px;
+      &-image {
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        padding        : 16px;
 
-      img {
-        max-height: 100%;
+        img {
+          max-height: 100%;
+        }
       }
     }
   }
