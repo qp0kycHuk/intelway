@@ -29,7 +29,7 @@ function loadHandler() {
   ripple.deAttach('.btn-text')
 
   swiper.init()
-  ymaps.init()
+  // ymaps.init()
   animations.init()
 
   scrollHandler()

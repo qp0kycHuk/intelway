@@ -1,6 +1,36 @@
 <%= require('./html-includes/header.html')() %>
+<%= require('./html-includes/breadcrumps.html')() %>
 
+<section class="p-section bg-l3 pt-5">
+  <div class="title mb-6 sm:mb-10">1С-Битрикс</div>
+  <div class="catalog-preview mb-14">
+    <div class="catalog-preview-image ratio ratio-1/1">
+      <img src="img/test.gif" alt="" class="absolute-fit object-cover">
+    </div>
+    <div class="catalog-preview-content">
+      <div class="text-xl sm:text-3.5xl font-semibold mb-4 sm:mb-8">1С-Битрикс</div>
+      <div class="max-lg:text-sm">
+        «1С-Битрикс: Управление сайтом» – профессиональная система управления веб-проектами,
+        универсальный программный продукт для создания, поддержки и успешного развития:
+        <br><br>
+        <ul class="leading-relaxed">
+          <li><span class="text-primary font-bold">✓</span> корпоративных сайтов </li>
+          <li><span class="text-primary font-bold">✓</span> интернет-магазинов </li>
+          <li><span class="text-primary font-bold">✓</span> информационных порталов </li>
+          <li><span class="text-primary font-bold">✓</span> сайтов сообществ </li>
+          <li><span class="text-primary font-bold">✓</span> социальных сетей и других веб-проектов </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
+  <div class="flex flex-col gap-4">
+    <% for(let i = 0; i < 7; i++) { %>
+    <%= require('./html-includes/catalog-item.html')() %>
+    <% } %>
+  </div>
+</section>
 
+<%= require('./html-includes/pray.html')() %>
 <%= require('./html-includes/map.html')() %>
 <%= require('./html-includes/footer.html')() %>
