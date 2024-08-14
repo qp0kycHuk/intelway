@@ -1,6 +1,67 @@
 <%= require('./html-includes/header.html')() %>
+<%= require('./html-includes/breadcrumps.html')() %>
 
+<section class="p-section bg-l3 pt-5">
+  <div class="title mb-6 sm:mb-10">Контакты</div>
 
+  <div class="contact-inner">
+    <div class="contact-content">
+      <div class="max-sm:text-sm">г. Краснодар, ул. Селезнёва д. 203, оф. 36/8</div>
+      <a href="javascript:;" class="btn btn-text hover-underline">
+        <span class="font-bold text-xl sm:text-3.5xl">8 800 100 86 76</span>
+      </a>
+      <div class="mt-9 w-full">
+        <div class="text-2xl font-semibold mb-4">Часы работы</div>
+        <div class="flex flex-col gap-2">
+          <div class="contact-time">
+            <div class="">Пн-Пт</div>
+            <div class="font-semibold">08:00-17:00</div>
+          </div>
+          <div class="contact-time">
+            <div class="">Пн-Пт</div>
+            <div class="font-semibold">08:00-17:00</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-9 max-sm:text-sm">
+        Но вы можете звонить и отправлять
+        сообщения в любое время.
+        <br><br>
+        Или свяжитесь с нами через один
+        из наших профилей в социальных сетях!
+      </div>
+
+      <div class="mt-9"></div>
+      <%= require('./html-includes/header-soc.html')() %>
+    </div>
+    <div class="contact-form">
+      <div class="text-xl sm:text-2xl lg:text-4xl font-semibold mb-6">Есть вопросы? Задайте их нам!</div>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        <label class="block">
+          <div class="mb-2 font-semibold">Ваше имя</div>
+          <input type="text" class="input w-full">
+        </label>
+        <label class="block">
+          <div class="mb-2 font-semibold">Ваш телефон</div>
+          <input type="tel" class="input w-full" placeholder="">
+        </label>
+        <label class="block col-span-full">
+          <div class="mb-2 font-semibold">Что вас интересует</div>
+          <textarea class="input w-full h-36"></textarea>
+        </label>
+      </div>
+      <button class="btn btn-primary btn-whitebg mt-8 border border-default/10 shadow-md ">
+        <span class="uppercase font-semibold">отправить заявку</span>
+      </button>
+      <a href="javascript:;" class="mt-8 hover:underline opacity-60 text-xs text-white block">
+        Отправляя форму, Вы даете согласие на обработку
+        Ваших персональных данных
+      </a>
+    </div>
+  </div>
+</section>
 
 <%= require('./html-includes/map.html')() %>
 <%= require('./html-includes/footer.html')() %>
