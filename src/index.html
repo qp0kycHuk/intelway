@@ -187,18 +187,7 @@
 
   <div class="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-6">
     <% for(let i = 0; i < 8; i++) { %>
-    <div class="category-item">
-      <div class="category-item-image">
-        <img src="img/category-sempl.svg" alt="" class="icon">
-      </div>
-      <div class="category-item-content">
-        <div class="sm:text-lg font-bold mb-1 sm:mb-3 leading-xs">Глобальная автоматизация</div>
-        <div class="max-sm:text-xs">
-          Оказываем полный спектр
-          услуг от 1С до ККМ
-        </div>
-      </div>
-    </div>
+    <%= require('./html-includes/advantages-item.html')() %>
     <% } %>
   </div>
 </section>

@@ -1,6 +1,30 @@
 <%= require('./html-includes/header.html')() %>
+<%= require('./html-includes/breadcrumps.html')() %>
+
+<section class="p-section bg-l3 pt-5">
+  <div class="title mb-6 sm:mb-10">Аутсорсинг 1С</div>
+  <div class="mb-6 sm:mb-10">
+    Предлагаем воспользоваться услугами нашей команды для решения ваших задач.
+  </div>
+
+  <div class="mb-6 sm:mb-8 text-2xl sm:text-3.5xl font-semibold">
+    Форматы работы
+  </div>
+  <div class="grid xs:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-7">
+    <% for(let i = 0; i < 3; i++) { %>
+    <%= require('./html-includes/service-item.html')() %>
+    <% } %>
+  </div>
 
 
+  <div class="mt-18"></div>
+  <div class="title mb-6 sm:mb-10">Особенности разработки и сопровождения</div>
+  <div class="grid xs:grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-6">
+    <% for(let i = 0; i < 4; i++) { %>
+    <%= require('./html-includes/advantages-item.html')() %>
+    <% } %>
+  </div>
+</section>
 
 <%= require('./html-includes/map.html')() %>
 <%= require('./html-includes/footer.html')() %>
