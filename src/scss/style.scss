@@ -826,3 +826,27 @@ body {
     }
   }
 }
+
+.buner {
+  position       : relative;
+  border-radius  : 32px;
+  overflow       : hidden;
+  height         : 386px;
+  padding-left   : 64px;
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+
+  &-image {
+    position       : absolute;
+    right          : 0;
+    top            : 0;
+    height         : 100%;
+    object-fit     : contain;
+    object-position: right;
+  }
+
+  &-content {
+    position: relative;
+  }
+}
