@@ -5,18 +5,165 @@
   <div class="title mb-6 sm:mb-10">Торговое оборудование</div>
   <div class="buner">
     <div class="absolute-fit" style="background: linear-gradient(360deg, #C4D9F2 0%, #EAF3FD 100%);"></div>
-    <img src="img/buner/equipment.png" alt="" class="buner-image ">
+    <picture>
+      <source media="(min-width: 1199.98px)" srcset="img/buner/equipment.png">
+      <img src="img/buner/equipment-sm.png" alt="" class="buner-image ">
+    </picture>
 
     <div class="buner-content">
-      <img src="img/equipment-buner.png" alt="" class="mb-8">
+      <img src="img/equipment-buner.png" alt="" class="mb-4 sm:mb-8 max-lg:w-44">
 
-      <div class="text-3.5xl font-semibold">
+      <div class="lg:text-3.5xl font-semibold">
         Оборудование для автоматизации <br>
         розничной торговли
       </div>
     </div>
   </div>
+  <div class="mt-10"></div>
+
+  <div class="flex items-center gap-4 max-lg:flex-col">
+    <div class="max-sm:text-sm">
+      Согласно Федеральному Закону № 54-ФЗ «О применении ККТ», магазины, торгующие в розницу, обязаны применять контрольно-кассовую технику нового образца. Это значит, что практически любой магазин (кроме исключений, указанных в тексте Закона) должен быть оборудован онлайн-кассой с фискальным накопителем и иметь контракт с оператором фискальных данных (ОФД) для передачи информации в ФНС.
+      <br><br>
+      <b>Касса — обязательное оборудование для торговли. </b>
+      <br><br>
+      Применение новой контрольно-кассовой техники позволит предпринимателям не только соблюдать 54-ФЗ и избежать внушительных штрафов, но и автоматизировать бизнес-процессы, повысить лояльность покупателей и увеличить прибыль.
+    </div>
+
+    <picture class="shrink-0">
+      <source media="(min-width: 609.98px)" srcset="img/equipment-jigurda.png">
+      <img src="img/equipment-jigurda-sm.png" alt="">
+    </picture>
+  </div>
 </section>
 
+<!-- Техника для автоматизации розничной торговли -->
+<section class="p-section section-l2">
+  <div class="title mb-3 sm:mb-6">Техника для автоматизации розничной торговли</div>
+  <div class="mb-6 sm:mb-10 max-sm:text-sm">
+    Автоматизация учета розничной торговли во многом зависит от правильного выбора контрольно-кассовой техники.
+    На выбор предпринимателя при покупке ККТ влияют:
+  </div>
+
+  <div class="grid lg:grid-cols-2 gap-2.5">
+    <div class="technique-item col-span-full">
+      <img src="img/dolphin.png" alt="" class="shrink-0 w-9 sm:w-11">
+      <div class="font-semibold max-sm:text-sm">
+        Удобство использования кассы (например, не требуется обучение кассиров, запасные части ККТ легко заменяются, компания-производитель
+        помогает в вопросах, связанных с эксплуатацией кассы)
+      </div>
+    </div>
+    <div class="technique-item">
+      <img src="img/dolphin.png" alt="" class="shrink-0 w-9 sm:w-11">
+      <div class="font-semibold max-sm:text-sm">
+        Нагрузка на торговую точку (количество покупателей,
+        кассовых зон)
+      </div>
+    </div>
+    <div class="technique-item">
+      <img src="img/dolphin.png" alt="" class="shrink-0 w-9 sm:w-11">
+      <div class="font-semibold max-sm:text-sm">
+        Соответствие кассы 54-ФЗ
+      </div>
+    </div>
+    <div class="technique-item">
+      <img src="img/dolphin.png" alt="" class="shrink-0 w-9 sm:w-11">
+      <div class="font-semibold max-sm:text-sm">
+        Репутация фирмы-производителя и отзывы
+        предпринимателей о ККТ
+      </div>
+    </div>
+    <div class="technique-item">
+      <img src="img/dolphin.png" alt="" class="shrink-0 w-9 sm:w-11">
+      <div class="font-semibold max-sm:text-sm">
+        Стоимость оборудования
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Преимущества использования ККТ -->
+<section class="p-section bg-l3">
+  <div class="title mb-6 sm:mb-10">Преимущества использования ККТ</div>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-6">
+    <% for(let i = 0; i < 3; i++) { %>
+    <div class="advantages-item sm:p-6">
+      <div class="advantages-item-image w-full">
+        <img src="/img/category-sempl.svg" alt="" class="icon">
+      </div>
+      <div class="advantages-item-content">
+        <div class="max-sm:text-xs text-left">
+          Электронное оборудование для торговли
+          обеспечивает предпринимателю доступ
+          ко всем операциям, совершенным
+          на кассе, что устраняет риск ошибок
+          и повышает контроль за товарооборотом
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+  <div class="flex mt-8">
+    <button class="btn btn-primary btn-fill sm:mx-auto">
+      <span class="uppercase font-semibold">ЗАКАЗАТЬ ОБОРУДОВАНИЕ</span>
+    </button>
+  </div>
+
+  <div class="mt-10 sm:mt-18"></div>
+
+  <div class="flex items-center max-lg:flex-col relative rounded-4xl overflow-hidden lg:pl-12 px-4 sm:px-6">
+    <div class="absolute-fit" style="background: linear-gradient(100.12deg, rgba(29, 140, 136, 0) 0%, rgba(8, 225, 217, 0.5) 100%),#196C69;"></div>
+    <div class="relative text-white py-8">
+      <div class="font-semibold text-xl sm:text-2.5xl mb-4">
+        Оборудование для автоматизации складского учета
+      </div>
+      <div class="max-sm:text-sm">
+        Слаженная и бесперебойная работа склада — залог успешного обслуживания клиентов и увеличения прибыли. Специальные решения автоматизации склада позволят полностью настроить работу и большого предприятия, и небольшой розничной торговой точки
+      </div>
+    </div>
+    <img src="img/jigurda.png" alt="" class="relative shrink-0">
+  </div>
+
+  <div class="mt-10 sm:mt-18"></div>
+  <div class="title mb-6 sm:mb-10">Зачем автоматизировать работу склада</div>
+  <div class="max-sm:text-sm">
+    <b>На любом складе всегда находится огромное количество товаров, которые пребывают в движении - отправляются на торговые точки, списываются, заменяются на новые.</b> Огромный ассортимент требует строгого учета, а риск потери и хищений - не менее строгого контроля за персоналом и условиями хранения. Автоматизация складов и ряда процессов, ранее выполнявшихся вручную, позволяет сократить ошибки, вызванные человеческим фактором и управлять складом эффективно и быстро (например, проводя инвентаризацию без остановки работы хранилища).
+  </div>
+</section>
+
+<!-- Устройства для автоматизации -->
+<section class="p-section section-l2">
+  <div class="title mb-3 sm:mb-6">Устройства для автоматизации</div>
+  <div class="mb-6 sm:mb-10 max-sm:text-sm">
+    Чтобы усовершенствовать работу склада, сделать риск ошибок минимальным, а скорость работы сотрудников максимальной,
+    на помощь приходят следующие устройства:
+  </div>
+  <div class="grid grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-7">
+    <% for(let i = 0; i < 3; i++) { %>
+    <%= require('./html-includes/service-item.html')() %>
+    <% } %>
+  </div>
+</section>
+
+<!-- Соответствие законодательству: -->
+<section class="p-section bg-l3">
+  <div class="title mb-6 sm:mb-10">Соответствие законодательству:</div>
+
+  <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+    <% for(let i = 0; i < 3; i++) { %>
+    <a href="javascript:;" class="service-item py-7 px-3">
+      <img src="/img/dolphin.png" alt="" class="size-18 mx-auto mb-4">
+
+      <div class="service-item-content">
+        <div class="text-center sm:text-2xl font-semibold">
+          Кассовое оборудование
+          для ЕГАИС
+        </div>
+      </div>
+    </a>
+    <% } %>
+  </div>
+</section>
+<%= require('./html-includes/pray.html')() %>
 <%= require('./html-includes/map.html')() %>
 <%= require('./html-includes/footer.html')() %>

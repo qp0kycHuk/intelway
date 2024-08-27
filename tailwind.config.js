@@ -76,8 +76,9 @@ module.exports = {
       },
       boxShadow: {
         md: '0 3px 1px 0 #0000000A, 0 3px 8px 0 #0000000F'
-
-
+      },
+      borderRadius: {
+        ['4xl']: '2rem'
       }
     },
   },

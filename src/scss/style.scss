@@ -1,7 +1,7 @@
 @import 'functions';
 
 :root {
-  // theme colors
+  /* theme colors */
   --primary-rgb : #{cl(#196C69)};
   --sec-rgb     : #{cl(#15948F)};
   --blue-rgb    : #{cl(#2173E5)};
@@ -9,7 +9,7 @@
   --green-rgb   : #{cl(#27ae60)};
   --yellow-rgb  : #{cl(#FECB29)};
 
-  // colors
+  /* colors */
   --bg1-rgb     : #{cl(#ededed)};
   --bg2-rgb     : #{cl(#EFF2F6)};
   --bg3-rgb     : #{cl(#fff)};
@@ -17,7 +17,7 @@
   --white-rgb   : #{cl(#fff)};
   --black-rgb   : #{cl(#000)};
 
-  // variables
+  /* variables */
   --bg1    : rgb(var(--bg1-rgb));
   --bg2    : rgb(var(--bg2-rgb));
   --bg3    : rgb(var(--bg3-rgb));
@@ -189,6 +189,49 @@ body {
     @media (max-width: theme('screens.sm')) {
       padding-top   : 32px;
       padding-bottom: 32px;
+    }
+  }
+
+  .advantages {
+    &-item {
+      border        : 1px solid rgba(0, 0, 0, 0.04);
+      border-radius : 32px;
+      box-shadow    : 0 3px 1px 0 rgba(0, 0, 0, 0.039), 0 3px 8px 0 rgba(0, 0, 0, 0.059);
+      padding       : 38px 16px;
+      display       : flex;
+      flex-direction: column;
+      gap           : 24px;
+
+      @media (max-width: theme('screens.sm')) {
+        padding       : 8px;
+        padding-bottom: 32px;
+        gap           : 16px;
+      }
+
+      &-image {
+        height         : 180px;
+        width          : calc(100% - 80px);
+        margin-left    : auto;
+        margin-right   : auto;
+        background     : linear-gradient(306.3deg, rgba(212, 248, 246, 0) 0%, rgba(157, 228, 226, 0.6) 100%), rgba(183, 233, 221, 0.6);
+        border-radius  : 20px;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        font-size      : 92px;
+
+        @media (max-width: theme('screens.sm')) {
+          max-width: 100%;
+          width    : 260px;
+          height   : 132px;
+          font-size: 68px;
+        }
+      }
+
+      &-content {
+        flex-grow : 1;
+        text-align: center;
+      }
     }
   }
 }
@@ -405,48 +448,7 @@ body {
   }
 }
 
-.advantages {
-  &-item {
-    border        : 1px solid rgba(0, 0, 0, 0.04);
-    border-radius : 32px;
-    box-shadow    : 0 3px 1px 0 rgba(0, 0, 0, 0.039), 0 3px 8px 0 rgba(0, 0, 0, 0.059);
-    padding       : 38px 16px;
-    display       : flex;
-    flex-direction: column;
-    gap           : 24px;
 
-    @media (max-width: theme('screens.sm')) {
-      padding       : 8px;
-      padding-bottom: 32px;
-      gap           : 16px;
-    }
-
-    &-image {
-      height         : 180px;
-      width          : calc(100% - 80px);
-      margin-left    : auto;
-      margin-right   : auto;
-      background     : linear-gradient(306.3deg, rgba(212, 248, 246, 0) 0%, rgba(157, 228, 226, 0.6) 100%), rgba(183, 233, 221, 0.6);
-      border-radius  : 20px;
-      display        : flex;
-      align-items    : center;
-      justify-content: center;
-      font-size      : 92px;
-
-      @media (max-width: theme('screens.sm')) {
-        width    : 100%;
-        max-width: 260px;
-        height   : 132px;
-        font-size: 68px;
-      }
-    }
-
-    &-content {
-      flex-grow : 1;
-      text-align: center;
-    }
-  }
-}
 
 .offer {
   &-grid {
@@ -837,6 +839,17 @@ body {
   flex-direction : column;
   justify-content: center;
 
+  @media (max-width: theme('screens.lg')) {
+    height        : auto;
+    padding       : 32px;
+    padding-bottom: 300px;
+  }
+
+  @media (max-width: theme('screens.sm')) {
+    padding       : 24px 16px;
+    padding-bottom: 300px;
+  }
+
   &-image {
     position       : absolute;
     right          : 0;
@@ -844,9 +857,47 @@ body {
     height         : 100%;
     object-fit     : contain;
     object-position: right;
+
+    @media (max-width: theme('screens.lg')) {
+      height         : 300px;
+      bottom         : 0;
+      top            : auto;
+      width          : 100%;
+      left           : 0;
+      object-position: bottom;
+      object-fit     : none;
+    }
+
   }
 
   &-content {
     position: relative;
+
+    @media (max-width: theme('screens.lg')) {
+      order  : -1;
+      z-index: 1;
+    }
+  }
+}
+
+.section-l2 {
+  background:
+    linear-gradient(96.6deg, theme('colors.l3 / 70%') 0%, theme('colors.l3 / 0%') 100%), theme('colors.l2');
+
+}
+
+.technique-item {
+  display      : flex;
+  align-items  : center;
+  gap          : 18px;
+  padding      : 24px;
+  background   : theme('colors.l3');
+  border       : 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow   : 0 3px 1px 0 rgba(0, 0, 0, 0.04), 0 3px 8px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+
+  @media (max-width: theme('screens.lg')) {
+    padding: 16px;
+    gap    : 12px;
   }
 }
