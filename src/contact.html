@@ -1,8 +1,8 @@
 <%= require('./html-includes/header.html')() %>
 <%= require('./html-includes/breadcrumps.html')() %>
 
-<section class="p-section bg-l3 pt-5">
-  <div class="title mb-6 sm:mb-10">Контакты</div>
+<section class="pt-5 p-section bg-l3">
+  <div class="mb-6 title sm:mb-10">Контакты</div>
 
   <div class="contact-inner">
     <div class="contact-content">
@@ -10,8 +10,8 @@
       <a href="javascript:;" class="btn btn-text hover-underline">
         <span class="font-bold text-xl sm:text-3.5xl">8 800 100 86 76</span>
       </a>
-      <div class="mt-9 w-full">
-        <div class="text-2xl font-semibold mb-4">Часы работы</div>
+      <div class="w-full mt-9">
+        <div class="mb-4 text-2xl font-semibold">Часы работы</div>
         <div class="flex flex-col gap-2">
           <div class="contact-time">
             <div class="">Пн-Пт</div>
@@ -36,26 +36,26 @@
       <%= require('./html-includes/header-soc.html')() %>
     </div>
     <div class="contact-form">
-      <div class="text-xl sm:text-2xl lg:text-4xl font-semibold mb-6">Есть вопросы? Задайте их нам!</div>
+      <div class="mb-6 text-xl font-semibold sm:text-2xl lg:text-4xl">Есть вопросы? Задайте их нам!</div>
 
-      <div class="grid sm:grid-cols-2 gap-4">
+      <div class="grid gap-4 sm:grid-cols-2">
         <label class="block">
           <div class="mb-2 font-semibold">Ваше имя</div>
-          <input type="text" class="input w-full">
+          <input type="text" class="w-full input">
         </label>
         <label class="block">
           <div class="mb-2 font-semibold">Ваш телефон</div>
-          <input type="tel" class="input w-full" placeholder="">
+          <input type="tel" class="w-full input" placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _">
         </label>
         <label class="block col-span-full">
           <div class="mb-2 font-semibold">Что вас интересует</div>
-          <textarea class="input w-full h-36"></textarea>
+          <textarea class="w-full input h-36"></textarea>
         </label>
       </div>
-      <button class="btn btn-primary btn-whitebg mt-8 border border-default/10 shadow-md ">
-        <span class="uppercase font-semibold">отправить заявку</span>
+      <button class="mt-8 border shadow-md btn btn-primary btn-whitebg border-default/10 ">
+        <span class="font-semibold uppercase">отправить заявку</span>
       </button>
-      <a href="javascript:;" class="mt-8 hover:underline opacity-60 text-xs text-white block">
+      <a href="javascript:;" class="block mt-8 text-xs text-white hover:underline opacity-60">
         Отправляя форму, Вы даете согласие на обработку
         Ваших персональных данных
       </a>

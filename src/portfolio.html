@@ -1,9 +1,26 @@
 <%= require('./html-includes/header.html')() %>
 <%= require('./html-includes/breadcrumps.html')() %>
 
-<section class="p-section bg-l3 pt-5">
-  <div class="title mb-6 sm:mb-10">Портфолио</div>
+<section class="pt-5 p-section bg-l3">
+  <div class="mb-6 title sm:mb-10">Портфолио</div>
+  <div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3 sm:gap-4 lg:gap-7">
+    <% for(let i = 0; i < 5; i++) { %>
+    <a href="javascript:;" class="service-item btn-group">
+      <div class="ratio ratio-[390/214]">
+        <img src="/img/portfolio-image.jpg" alt="" class="object-cover absolute-fit">
+      </div>
+      <div class="px-6 pt-6 sm:pt-9 pb-7 service-content">
+        <div class="mb-6 text-base font-bold leading-normal sm:text-lg">
+          Разработка приложения и внедрение CRM, разработка сайта и мобильного приложения
+        </div>
+        <div class="flex mt-auto">
+          <button class="font-semibold uppercase border shadow-md btn btn-primary btn-whitebg border-default/10">подробнее</button>
+        </div>
+      </div>
+    </a>
+    <% } %>
+  </div>
 </section>
-
+<%= require('./html-includes/pray.html')() %>
 <%= require('./html-includes/map.html')() %>
 <%= require('./html-includes/footer.html')() %>

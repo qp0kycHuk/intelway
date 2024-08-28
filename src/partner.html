@@ -1,9 +1,43 @@
 <%= require('./html-includes/header.html')() %>
 <%= require('./html-includes/breadcrumps.html')() %>
 
-<section class="p-section bg-l3 pt-5">
-  <div class="title mb-6 sm:mb-10">Партнерам</div>
-</section>
+<section class="pt-5 p-section bg-l3">
+  <div class="mb-6 title sm:mb-10">Партнерам</div>
+  <div class="mb-5 text-sm font-normal leading-normal sm:text-base">
+    Обращаем внимание партнеров на то, что использовать новую возможность мы рекомендуем в первую очередь для предложения услуг по эффективной рекламе своим клиентам, а не для размещения собственной рекламы. Этим объясняется нетипичная ценовая политика по рекламным услугам:
+  </div>
+  <ul class="pl-5 mb-5 text-sm font-normal leading-normal list-disc list-outside sm:text-base sm:mb-9">
+    <li>Партнерам предоставляется скидка 50% на размещение рекламы компаний, не являющихся партнерами "1С".</li>
+    <li>Собственная реклама партнеров размещается по полной стоимости и не подлежит компенсации по договору франчайзинга. Размещение рекламы партнеров в формах отчетности не рекомендуется и согласуется особо.</li>
+  </ul>
 
+  <div class="relative overflow-hidden text-white mb-7 sm:mb-10 rounded-4xl partner-gradient bg-primary">
+    <img class="absolute min-w-[600px] lg:min-w-[1000px] -bottom-28 sm:-top-44 -left-24 sm:left-auto sm:-right-60 lg:-right-52" src="img/partner-bg.png" alt="">
+    <div class="relative px-4 pt-10 sm:px-12 pb-65 sm:pb-10">
+      <div class="mb-6 text-2xl font-semibold leading-tight">Приглашаем в нашу команду</div>
+      <div class="flex">
+        <button class="w-full font-semibold uppercase border shadow-md btn btn-primary btn-whitebg border-default/10 sm:w-auto">Смотреть вакансии</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-6 text-2xl font-semibold leading-tight">Частые вопросы</div>
+  <div class="flex flex-col gap-3">
+    <% for(let i = 0; i < 4; i++) { %>
+    <div class="p-4 border border-solid sm:p-8 border-black/10 rounded-4xl group/toggle" data-toggle-cover>
+      <div class="flex items-center justify-between gap-4 cursor-pointer" data-toggle-link>
+        <div class="text-lg font-semibold sm:text-xl">Распространение конфигураций, разработанных партнерами фирмы "1С"</div>
+        <c-icon class="icon group-[.toggle-active]/toggle:-rotate-90 duration-200" href="img/icons.svg#to-right"></c-icon>
+      </div>
+      <div class="group-[.toggle-active]/toggle:block hidden" data-toggle-content>
+        <div class="pt-6 text-sm font-normal leading-normal sm:text-base">
+          Фирма "1С" принимает к рассмотрению конфигурации для программных продуктов системы "1С:Предприятие 8", разработанные нашими партнерами, с целью возможного последующего распространения. Партнерские продукты, принятые к распространению, размещаются в разделе прайс-листа фирмы "1С" и доступны для заказа. В случае принятия решения о распространении с разработчиком будет заключен договор на распространение конфигурации. Производство конфигурации, как коробочного продукта, а также доставка его на склад отдела продаж фирмы "1С" осуществляется силами разработчика. При рассмотрении конфигураций предпочтение будет отдаваться разработчикам, имеющим опыт разработки отраслевых решений и опыт внедрения в определенных отраслях. На этапе согласования специалисты фирмы "1С" могут при необходимости запросить список организаций, в которых была внедрена данная конфигурация.
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</section>
+<%= require('./html-includes/pray.html')() %>
 <%= require('./html-includes/map.html')() %>
 <%= require('./html-includes/footer.html')() %>

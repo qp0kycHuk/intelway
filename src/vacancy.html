@@ -1,9 +1,38 @@
 <%= require('./html-includes/header.html')() %>
 <%= require('./html-includes/breadcrumps.html')() %>
 
-<section class="p-section bg-l3 pt-5">
-  <div class="title mb-6 sm:mb-10">Вакансии</div>
+<section class="pt-5 p-section bg-l3">
+  <div class="mb-6 title sm:mb-10">Вакансии</div>
+  <div class="mb-5 text-sm font-normal leading-normal sm:text-base">
+    Обращаем внимание партнеров на то, что использовать новую возможность мы рекомендуем в первую очередь для предложения услуг по эффективной рекламе своим клиентам, а не для размещения собственной рекламы. Этим объясняется нетипичная ценовая политика по рекламным услугам:
+  </div>
+  <ul class="pl-5 mb-5 text-sm font-normal leading-normal list-disc list-outside sm:text-base">
+    <li>Партнерам предоставляется скидка 50% на размещение рекламы компаний, не являющихся партнерами "1С".</li>
+    <li>Собственная реклама партнеров размещается по полной стоимости и не подлежит компенсации по договору франчайзинга. Размещение рекламы партнеров в формах отчетности не рекомендуется и согласуется особо.</li>
+  </ul>
+  <div class="mb-5 text-sm font-normal leading-normal sm:text-base sm:mb-9">
+    Фирма "1С" предлагает всем заинтересованным организациям поддержать новый сервис в качестве рекламодателей. Краткое и содержательное сообщение, помещенное в рассылке форм отчетности, будет позитивно воспринято пользователями и может дать больший эффект, чем реклама в глянцевых журналах. Ведь таким образом Вы не только продвигаете свою марку, продукцию и услуги, но и помогаете десяткам тысяч бухгалтеров вовремя и без ошибок сдавать отчетность - они наверняка оценят Вашу поддержку.
+  </div>
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-7">
+    <% for(let i = 0; i < 4; i++) { %>
+    <a href="javascript:;" class="service-item">
+      <div class="px-4 py-6 sm:px-6 service-content">
+        <div class="flex items-center gap-4 mb-6 sm:flex-col sm:items-stretch sm:gap-8">
+          <div class="flex items-center justify-center size-14 sm:size-20 rounded-3xl jobs-gradient shrink-0">
+            <img class="text-2xl sm:text-4xl icon" src="img/user.svg" alt="">
+          </div>
+          <div class="text-lg font-semibold sm:text-xl">Ведущий специалист по обслуживанию</div>
+        </div>
+        <div class="mb-2 text-sm font-normal sm:text-base opacity-70">Полная занятость, полный день</div>
+        <div class="mb-10 text-sm font-semibold sm:text-base">от 42 200 ₽ на руки</div>
+        <div class="flex mt-auto">
+          <button class="w-full uppercase btn btn-primary btn-fill sm:w-auto" data-fancybox-modal data-type="ajax" data-src="dialog-product.html">узнать о вакансии</button>
+        </div>
+      </div>
+    </a>
+    <% } %>
+  </div>
 </section>
-
+<%= require('./html-includes/pray.html')() %>
 <%= require('./html-includes/map.html')() %>
 <%= require('./html-includes/footer.html')() %>

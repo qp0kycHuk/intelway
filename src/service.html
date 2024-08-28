@@ -1,9 +1,34 @@
 <%= require('./html-includes/header.html')() %>
 <%= require('./html-includes/breadcrumps.html')() %>
 
-<section class="p-section bg-l3 pt-5">
-  <div class="title mb-6 sm:mb-10">Шаблонная услуга</div>
+<section class="pt-5 p-section bg-l3">
+  <div class="mb-6 title sm:mb-10">Сопровождение 1С</div>
+  <div class="relative overflow-hidden mb-7 sm:mb-10 lg:mb-16 rounded-4xl">
+    <img class="absolute inset-0 object-cover object-left w-full h-full" src="img/service-bg.jpg" alt="">
+    <div class="relative px-4 py-8 sm:px-8 lg:px-16 lg:py-16">
+      <div class="w-full max-w-[435px]">
+        <div class="mb-4 text-xl font-semibold sm:text-2xl lg:text-3xl">Сопровождение 1С</div>
+        <div class="mb-4 text-sm font-bold sm:text-base">Узнайте, как сделать ваш бизнес эффективнее</div>
+        <div class="mb-12 text-sm font-normal sm:text-base">
+          Повышайте эффективность бизнеса с нами! Станьте лидером своей отрасли вместе с решениями 1С! Не знаете с чего начать – напишите или позвоните нам!
+        </div>
+        <div class="flex">
+          <button class="w-full font-semibold uppercase border shadow-md btn btn-primary btn-whitebg border-default/10 sm:w-auto">получить консультацию</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mb-6 title sm:mb-10">Что вы получите</div>
+  <div class="text-sm font-normal leading-normal sm:text-base">
+    <span class="font-semibold ">По статистике реальная автоматизация окупает себя в первые 3 месяца запуска на предприятии.</span>
+    <br><br>
+    Зачастую, многие предприятия понимают необходимости автоматизации процессов своего предприятия, но нет понимания что необходимо
+    автоматизировать, каким именно образом, где «узкое место» вашего бизнеса.
+    <br><br>
+    Поскольку в сфере бизнеса особенно важно развиваться, совершенствовать свои процессы, оптимизировать расходы – мы предлагаем
+    вам обратиться в Центр Реальной Автоматизации.
+  </div>
 </section>
-
+<%= require('./html-includes/pray.html')() %>
 <%= require('./html-includes/map.html')() %>
 <%= require('./html-includes/footer.html')() %>

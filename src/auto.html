@@ -1,8 +1,8 @@
 <%= require('./html-includes/header.html')() %>
 <%= require('./html-includes/breadcrumps.html')() %>
 
-<section class="p-section bg-l3 pt-5 pb-0">
-  <div class="title mb-6 sm:mb-10">Реальная автоматизация</div>
+<section class="pt-5 pb-0 p-section bg-l3">
+  <div class="mb-6 title sm:mb-10">Реальная автоматизация</div>
   <div class="buner">
     <div class="absolute-fit" style="background: linear-gradient(106.76deg, rgba(255, 222, 0, 0) 0%, rgba(255, 77, 0, 0.5) 100%),#FFDE00;"></div>
     <picture>
@@ -25,7 +25,7 @@
 
       <div class="sm:mt-12">
         <button class="btn btn-[#E30000] btn-whitebg max-sm:w-full">
-          <span class="uppercase font-semibold">СВЯЗАТЬСЯ С НАМИ</span>
+          <span class="font-semibold uppercase">СВЯЗАТЬСЯ С НАМИ</span>
         </button>
       </div>
     </div>
@@ -34,7 +34,7 @@
 
 <!-- Что вы получите -->
 <section class="p-section bg-l3">
-  <div class="title mb-3 sm:mb-6">Что вы получите</div>
+  <div class="mb-3 title sm:mb-6">Что вы получите</div>
   <div class="mb-6 sm:mb-10">
     Мы поможем найти узкие места в бизнесе любого размера. Посоветуем. Автоматизируем или доавтомаитзируем. Обучим.
   </div>
@@ -42,16 +42,16 @@
   <div class="grid grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-6">
     <% for(let i = 0; i < 3; i++) { %>
     <div class="advantages-item sm:p-6">
-      <div class="advantages-item-image w-full">
+      <div class="w-full advantages-item-image">
         <img src="/img/category-sempl.svg" alt="" class="icon">
       </div>
       <div class="advantages-item-content">
-        <div class="sm:text-lg font-bold leading-xs">Глобальная автоматизация</div>
+        <div class="font-bold sm:text-lg leading-xs">Глобальная автоматизация</div>
       </div>
     </div>
     <% } %>
   </div>
-  <div class="mt-6 p-6 rounded-2xl shadow-md max-sm:text-sm max-sm:px-4">
+  <div class="p-6 mt-6 shadow-md rounded-2xl max-sm:text-sm max-sm:px-4">
     Специалисты нашей компании прошли обучение и сертификацию по разработанной фирмой 1C технологии работы и помогут повысить эффективность
     бизнес процессов компании, проведут предварительный IT-аудит и предложат эффективные методы решения выявленных потребностей.
   </div>
@@ -59,7 +59,7 @@
 
 <!-- Вас удивит быстрый результат! -->
 <section class="p-section section-l2">
-  <div class="title mb-3 sm:mb-6">Вас удивит быстрый результат!</div>
+  <div class="mb-3 title sm:mb-6">Вас удивит быстрый результат!</div>
   <div class="mb-6 sm:mb-10 max-sm:text-sm">
     <b> По статистике реальная автоматизация окупает себя в первые 3 месяца запуска на предприятии.</b>
     <br><br>
@@ -105,14 +105,42 @@
 
 <!-- Что такое Реальная автоматизация? -->
 <section class="p-section bg-l3">
-  <div class="title mb-3 sm:mb-6">Что такое Реальная автоматизация?</div>
+  <div class="mb-3 title sm:mb-6">Что такое Реальная автоматизация?</div>
   <div class="max-sm:text-sm">
     Часто для эффективного ведения бизнеса требуется автоматизация “узких”, индивидуальных процессов компании. Например, нужно настроить особый учет единиц хранения или собственнику важно получать аналитику деятельности компании в оперативном режиме или необходима автоматизация показателей KPI подразделений – все это примеры недорогих, но в разы повышающих эффективность работы, задач, решаемых центрами реальной автоматизации.
     <br><br>
     Уменьшение рутинных операций, повышение прозрачности бизнеса, сокращение издержек – все это Реальная Автоматизация.
   </div>
-  <div class="mt-6"></div>
+  <div class="flex flex-col items-center gap-8 px-4 py-6 mt-6 sm:flex-row sm:px-6 sm:py-4 auto-gradient rounded-2xl">
+    <img class="order-2 w-full max-w-20 sm:order-1" src="img/pig.png" alt="">
+    <div class="order-1 text-sm font-semibold leading-normal sm:text-base sm:order-2">
+      Специалистов Центров реальной автоматизации в шутку называют «реальными кабанами» за их способность решать самые сложные задачи, поэтому символом Центров реальной автоматизации стал дикий кабан.
+    </div>
+  </div>
 </section>
 
+<!-- Наш опыт решения задач бизнеса -->
+
+<section class="p-section section-l2">
+  <div class="mb-3 title sm:mb-6">Наш опыт решения задач бизнеса</div>
+  <div class="grid gap-2 sm:grid-cols-2 sm:gap-4 lg:gap-7">
+    <% for(let i = 0; i < 2; i++) { %>
+    <a href="javascript:;" class="service-item btn-group">
+      <div class="ratio ratio-[390/134]">
+        <img src="/img/portfolio-image.jpg" alt="" class="object-cover absolute-fit">
+      </div>
+      <div class="px-6 pt-6 sm:pt-9 pb-7 service-content">
+        <div class="mb-6 text-base font-bold leading-normal sm:text-lg">
+          Автоматизация интернет-магазина и обработки заказов у ИП Тарасенко С.В. на базе ПП "1С:Комплексная автоматизация, редакция 2"
+        </div>
+        <div class="flex mt-auto">
+          <button class="font-semibold uppercase border shadow-md btn btn-primary btn-whitebg border-default/10">подробнее</button>
+        </div>
+      </div>
+    </a>
+    <% } %>
+  </div>
+</section>
+<%= require('./html-includes/pray.html')() %>
 <%= require('./html-includes/map.html')() %>
 <%= require('./html-includes/footer.html')() %>
