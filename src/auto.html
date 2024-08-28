@@ -1,8 +1,117 @@
 <%= require('./html-includes/header.html')() %>
 <%= require('./html-includes/breadcrumps.html')() %>
 
-<section class="p-section bg-l3 pt-5">
+<section class="p-section bg-l3 pt-5 pb-0">
   <div class="title mb-6 sm:mb-10">Реальная автоматизация</div>
+  <div class="buner">
+    <div class="absolute-fit" style="background: linear-gradient(106.76deg, rgba(255, 222, 0, 0) 0%, rgba(255, 77, 0, 0.5) 100%),#FFDE00;"></div>
+    <picture>
+      <source media="(min-width: 1199.98px)" srcset="img/buner/auto.png">
+      <img src="img/buner/auto-sm.png" alt="" class="buner-image ">
+    </picture>
+
+    <div class="buner-content">
+      <div>
+        <div class="text-xl lg:text-3.5xl font-semibold mb-3">
+          Реальная автоматизация
+        </div>
+        <div class="font-semibold ">Узнайте, как сделать ваш бизнес эффективнее</div>
+        <div class="mt-4 max-sm:text-sm">
+          Повышайте эффективность бизнеса с нами! <br class="max-sm:hidden">
+          Станьте лидером своей отрасли вместе с решениями 1С! <br class="max-sm:hidden">
+          Не знаете с чего начать – напишите или позвоните нам!
+        </div>
+      </div>
+
+      <div class="sm:mt-12">
+        <button class="btn btn-[#E30000] btn-whitebg max-sm:w-full">
+          <span class="uppercase font-semibold">СВЯЗАТЬСЯ С НАМИ</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Что вы получите -->
+<section class="p-section bg-l3">
+  <div class="title mb-3 sm:mb-6">Что вы получите</div>
+  <div class="mb-6 sm:mb-10">
+    Мы поможем найти узкие места в бизнесе любого размера. Посоветуем. Автоматизируем или доавтомаитзируем. Обучим.
+  </div>
+
+  <div class="grid grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-6">
+    <% for(let i = 0; i < 3; i++) { %>
+    <div class="advantages-item sm:p-6">
+      <div class="advantages-item-image w-full">
+        <img src="/img/category-sempl.svg" alt="" class="icon">
+      </div>
+      <div class="advantages-item-content">
+        <div class="sm:text-lg font-bold leading-xs">Глобальная автоматизация</div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+  <div class="mt-6 p-6 rounded-2xl shadow-md max-sm:text-sm max-sm:px-4">
+    Специалисты нашей компании прошли обучение и сертификацию по разработанной фирмой 1C технологии работы и помогут повысить эффективность
+    бизнес процессов компании, проведут предварительный IT-аудит и предложат эффективные методы решения выявленных потребностей.
+  </div>
+</section>
+
+<!-- Вас удивит быстрый результат! -->
+<section class="p-section section-l2">
+  <div class="title mb-3 sm:mb-6">Вас удивит быстрый результат!</div>
+  <div class="mb-6 sm:mb-10 max-sm:text-sm">
+    <b> По статистике реальная автоматизация окупает себя в первые 3 месяца запуска на предприятии.</b>
+    <br><br>
+    Зачастую, многие предприятия понимают необходимости автоматизации процессов своего предприятия, но нет понимания что необходимо
+    автоматизировать, каким именно образом, где «узкое место» вашего бизнеса.
+    <br><br>
+    Поскольку в сфере бизнеса особенно важно развиваться, совершенствовать свои процессы, оптимизировать расходы – мы предлагаем
+    вам обратиться в Центр Реальной Автоматизации.
+  </div>
+
+  <div class="mt-8 mb-6 text-2xl font-semibold">
+    Именно данные центры могут:
+  </div>
+  <div class="grid lg:grid-cols-2 gap-2.5">
+
+    <div class="technique-item">
+      <img src="img/dolphin.png" alt="" class="shrink-0 w-9 sm:w-11">
+      <div class="font-semibold max-sm:text-sm">
+        Выявить области автоматизации вашего бизнеса
+      </div>
+    </div>
+    <div class="technique-item">
+      <img src="img/dolphin.png" alt="" class="shrink-0 w-9 sm:w-11">
+      <div class="font-semibold max-sm:text-sm">
+        Описать бизнес-процессы и составить круг задач для решения
+      </div>
+    </div>
+    <div class="technique-item">
+      <img src="img/dolphin.png" alt="" class="shrink-0 w-9 sm:w-11">
+      <div class="font-semibold max-sm:text-sm">
+        Предложить варианты решений, реализовать и сдать
+        работу под ключ
+      </div>
+    </div>
+    <div class="technique-item">
+      <img src="img/dolphin.png" alt="" class="shrink-0 w-9 sm:w-11">
+      <div class="font-semibold max-sm:text-sm">
+        Вместе с вами убедиться в эффективности принятых решений
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Что такое Реальная автоматизация? -->
+<section class="p-section bg-l3">
+  <div class="title mb-3 sm:mb-6">Что такое Реальная автоматизация?</div>
+  <div class="max-sm:text-sm">
+    Часто для эффективного ведения бизнеса требуется автоматизация “узких”, индивидуальных процессов компании. Например, нужно настроить особый учет единиц хранения или собственнику важно получать аналитику деятельности компании в оперативном режиме или необходима автоматизация показателей KPI подразделений – все это примеры недорогих, но в разы повышающих эффективность работы, задач, решаемых центрами реальной автоматизации.
+    <br><br>
+    Уменьшение рутинных операций, повышение прозрачности бизнеса, сокращение издержек – все это Реальная Автоматизация.
+  </div>
+  <div class="mt-6"></div>
 </section>
 
 <%= require('./html-includes/map.html')() %>

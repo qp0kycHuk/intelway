@@ -47,7 +47,7 @@ body {
 }
 
 @media (hover) {
-  // temp
+  /* temp */
 
   .btn-white:hover,
   .btn-white:is(.btn-group:hover .btn),
@@ -101,7 +101,7 @@ body {
     }
 
     @media(hover) {
-      // temp
+      /* temp */
 
       &-wrapper:hover &::before,
       &:hover::before {
@@ -170,7 +170,7 @@ body {
       color     : theme('colors.default');
 
       @media(hover) {
-        // temp
+        /* temp */
 
         &:is(.btn-group:hover .btn),
         &:is(.btn-peer:hover~.btn),
@@ -840,14 +840,15 @@ body {
   justify-content: center;
 
   @media (max-width: theme('screens.lg')) {
-    height        : auto;
-    padding       : 32px;
-    padding-bottom: 300px;
+    height : auto;
+    padding: 32px;
+
+    padding-bottom: 210px;
   }
 
   @media (max-width: theme('screens.sm')) {
-    padding       : 24px 16px;
-    padding-bottom: 300px;
+    padding: 24px 16px;
+
   }
 
   &-image {
@@ -871,11 +872,17 @@ body {
   }
 
   &-content {
-    position: relative;
+    position      : relative;
+    display       : flex;
+    flex-direction: column;
 
     @media (max-width: theme('screens.lg')) {
       order  : -1;
       z-index: 1;
+    }
+
+    @media (max-width: theme('screens.sm')) {
+      gap: 210px;
     }
   }
 }
