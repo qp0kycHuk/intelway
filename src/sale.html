@@ -1,28 +1,28 @@
 <%= require('./html-includes/header.html')() %>
 <%= require('./html-includes/breadcrumps.html')() %>
 
-<section class="p-section bg-l3 pt-5">
-  <div class="title mb-6 sm:mb-10">Акции</div>
+<section class="pt-5 p-section bg-l3">
+  <div class="mb-6 title sm:mb-10">Акции</div>
 
-  <div class="grid sm:grid-cols-2 gap-4 md:gap-7">
+  <div class="grid gap-4 sm:grid-cols-2 md:gap-7">
     <% for(let i = 0; i < 4; i++) { %>
     <a href="javascript:;" class="service-item btn-group">
       <div class="ratio ratio-[600/214]">
-        <img src="/img/image-plug.jpg" alt="" class="absolute-fit object-cover">
+        <img src="/img/image-plug.jpg" alt="" class="object-cover absolute-fit">
       </div>
       <div class="p-4 lg:p-7 service-item-content">
-        <div class="sm:text-2xl font-semibold">
+        <div class="mb-3 font-semibold sm:text-2xl">
           скидка до 50% на программы 1с
         </div>
-        <div class="mt-3 max-sm:text-sm">
+        <div class="mb-6 max-sm:text-sm">
           Скидка на такие программы, как: Бухгалтерия 8. Базовая версия
           1С: Зарплата и Управление Персоналом 8. Базовая версия 1С:
           Управление торговлей 8. Базовая версия
         </div>
 
-        <div class="mt-6 flex">
-          <button class="btn btn-primary btn-whitebg mt-auto border border-default/10 shadow-md max-sm:w-full">
-            <span class="uppercase font-semibold ">подробнее об акции</span>
+        <div class="flex mt-auto">
+          <button class="mt-auto border shadow-md btn btn-primary btn-whitebg border-default/10 max-sm:w-full">
+            <span class="font-semibold uppercase ">подробнее об акции</span>
           </button>
         </div>
       </div>

@@ -1,11 +1,11 @@
 <%= require('./html-includes/header.html')() %>
 
 
-<section class="started-slider swiper w-full relative p-0">
+<section class="relative w-full p-0 started-slider swiper">
   <div class="swiper-wrapper">
-    <div class="swiper-slide w-full">
+    <div class="w-full swiper-slide">
       <div class="started section">
-        <div class="absolute-fit overflow-hidden">
+        <div class="overflow-hidden absolute-fit">
           <!-- started-gradient -->
           <div class="absolute-fit" style="background: linear-gradient(100deg, rgba(29, 140, 136, 0) 0%, rgba(8, 225, 217, 0.7) 100%),#196C69;"></div>
 
@@ -20,8 +20,8 @@
           <div class="started-title">
             Автоматизация <br> бизнеса с INTELWAY
           </div>
-          <div class="mt-6 md:mt-8 flex items-center gap-3">
-            <c-icon class="icon text-2xl inline-block align-middle text-yellow" href="img/icons.svg#1c"></c-icon>
+          <div class="flex items-center gap-3 mt-6 md:mt-8">
+            <c-icon class="inline-block text-2xl align-middle icon text-yellow" href="img/icons.svg#1c"></c-icon>
             <span class="font-medium max-sm:text-sm">Управляйте своим бизнесом на новом уровне</span>
           </div>
 
@@ -30,9 +30,9 @@
         </div>
       </div>
     </div>
-    <div class="swiper-slide w-full">
+    <div class="w-full swiper-slide">
       <div class="started section">
-        <div class=" absolute-fit overflow-hidden">
+        <div class="overflow-hidden  absolute-fit">
           <!-- started-gradient -->
           <div class="absolute-fit" style="background: linear-gradient(278deg, rgba(0, 0, 0, 0) 39.91%, rgba(0, 0, 0, 0.2) 100%),#EA6146;"></div>
 
@@ -47,8 +47,8 @@
           <div class="started-title">
             ИТС: УРЕЗАЕМ СЧЕТ <br> НА 1/3
           </div>
-          <div class="mt-6 md:mt-8 flex items-center gap-3">
-            <c-icon class="icon text-2xl inline-block align-middle text-yellow" href="img/icons.svg#1c"></c-icon>
+          <div class="flex items-center gap-3 mt-6 md:mt-8">
+            <c-icon class="inline-block text-2xl align-middle icon text-yellow" href="img/icons.svg#1c"></c-icon>
             <span class="font-medium max-sm:text-sm">Управляйте своим бизнесом на новом уровне</span>
           </div>
 
@@ -57,9 +57,9 @@
         </div>
       </div>
     </div>
-    <div class="swiper-slide w-full">
+    <div class="w-full swiper-slide">
       <div class="started section">
-        <div class=" absolute-fit overflow-hidden">
+        <div class="overflow-hidden  absolute-fit">
           <!-- started-gradient -->
           <div class="absolute-fit" style="background: linear-gradient(116.57deg, #C04549 16.67%, #E8BB47 100%);"></div>
 
@@ -77,7 +77,7 @@
           <div class="mt-6 md:mt-8 max-sm:text-sm max-sm:hidden">
             Скидка на такие программы, как:
           </div>
-          <ul class="list-disc pl-5 max-sm:text-sm mt-3 max-sm:hidden">
+          <ul class="pl-5 mt-3 list-disc max-sm:text-sm max-sm:hidden">
             <li>Бухгалтерия 8. Базовая версия</li>
             <li>1С: Зарплата и Управление Персоналом 8. Базовая версия</li>
             <li>1С: Управление торговлей 8. Базовая версия</li>
@@ -117,7 +117,7 @@
 
 <!-- Мы оказываем следующие услуги -->
 <section class="p-section bg-l3">
-  <div class="title mb-6 sm:mb-10">Мы оказываем следующие услуги</div>
+  <div class="mb-6 title sm:mb-10">Мы оказываем следующие услуги</div>
   <div class="grid grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-7">
     <% for(let i = 0; i < 6; i++) { %>
     <%= require('./html-includes/service-item.html')() %>
@@ -126,26 +126,26 @@
 </section>
 
 <!-- Программные продукты -->
-<section class="p-section overflow-hidden">
-  <div class="title mb-6 sm:mb-10">Программные продукты</div>
+<section class="overflow-hidden p-section">
+  <div class="mb-6 title sm:mb-10">Программные продукты</div>
   <div class="relative">
-    <div class="products-slider swiper -mx-2 lg:-mx-3 max-md:overflow-visible">
+    <div class="-mx-2 products-slider swiper lg:-mx-3 max-md:overflow-visible">
       <div class="swiper-wrapper">
         <% for(let i = 0; i < 10; i++) { %>
-        <div class="swiper-slide px-2 lg:px-3 w-52 md:w-1/3 lg:w-1/4">
+        <div class="px-2 swiper-slide lg:px-3 w-52 md:w-1/3 lg:w-1/4">
           <a href="javascript:;" class="service-item btn-group">
             <div class="ratio ratio-[290/210]">
-              <img src="img/image-plug.jpg" alt="" class="absolute-fit object-cover">
+              <img src="img/image-plug.jpg" alt="" class="object-cover absolute-fit">
             </div>
             <div class="p-4 lg:p-7 service-item-content">
-              <div class="sm:text-lg/xs font-semibold">
+              <div class="font-semibold sm:text-lg/xs">
                 1С: Зарплата и управление
                 персоналом
               </div>
 
               <div class="mt-6"></div>
-              <button class="btn btn-primary btn-whitebg mt-auto border border-default/10 shadow-md max-sm:w-full self-start">
-                <span class="uppercase font-semibold ">подробнее</span>
+              <button class="self-start mt-auto border shadow-md btn btn-primary btn-whitebg border-default/10 max-sm:w-full">
+                <span class="font-semibold uppercase ">подробнее</span>
               </button>
             </div>
           </a>
@@ -154,20 +154,20 @@
       </div>
     </div>
 
-    <div class="absolute right-full top-1/2 -translate-y-1/2 mr-6 max-md:hidden">
-      <button class="btn btn-primary btn-whitebg mt-auto border border-default/10 rounded-full shadow-md btn-icon products-slider-prev">
+    <div class="absolute mr-6 -translate-y-1/2 right-full top-1/2 max-md:hidden">
+      <button class="mt-auto border rounded-full shadow-md btn btn-primary btn-whitebg border-default/10 btn-icon products-slider-prev">
         <c-icon class="icon" href="img/icons.svg#to-left"></c-icon>
       </button>
     </div>
-    <div class="absolute left-full top-1/2 -translate-y-1/2 ml-6 max-md:hidden">
-      <button class="btn btn-primary btn-whitebg mt-auto border border-default/10 rounded-full shadow-md btn-icon products-slider-next">
+    <div class="absolute ml-6 -translate-y-1/2 left-full top-1/2 max-md:hidden">
+      <button class="mt-auto border rounded-full shadow-md btn btn-primary btn-whitebg border-default/10 btn-icon products-slider-next">
         <c-icon class="icon" href="img/icons.svg#to-right"></c-icon>
       </button>
     </div>
   </div>
   <div class="flex mt-8">
     <button class="btn btn-primary btn-fill sm:mx-auto">
-      <span class="uppercase font-semibold">ПОКАЗАТЬ ВСЕ</span>
+      <span class="font-semibold uppercase">ПОКАЗАТЬ ВСЕ</span>
     </button>
   </div>
 </section>
@@ -183,7 +183,7 @@
 
 <!-- С нами комфортно -->
 <section class="p-section bg-l3">
-  <div class="title mb-6 sm:mb-10">С нами комфортно</div>
+  <div class="mb-6 title sm:mb-10">С нами комфортно</div>
 
   <div class="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-6">
     <% for(let i = 0; i < 8; i++) { %>
@@ -194,54 +194,54 @@
 
 <!-- Мы предлагаем -->
 <section class="p-section">
-  <div class="title mb-6 sm:mb-10">Мы предлагаем</div>
+  <div class="mb-6 title sm:mb-10">Мы предлагаем</div>
 
   <div class="offer-grid">
     <a href="javascript:;" class="offer-item offer-item-bitrix btn-group">
       <img src="img/offer/bitrix.png" alt="" class="m-auto">
       <div class="offer-item-content">
-        <div class="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-5">Продукты Битрикс</div>
-        <button class="btn btn-primary btn-whitebg border border-default/10 shadow-md max-sm:w-full">
-          <span class="uppercase font-semibold">смотреть продукцию</span>
+        <div class="mb-3 text-xl font-semibold text-center sm:text-2xl sm:mb-5">Продукты Битрикс</div>
+        <button class="border shadow-md btn btn-primary btn-whitebg border-default/10 max-sm:w-full">
+          <span class="font-semibold uppercase">смотреть продукцию</span>
         </button>
       </div>
     </a>
     <a href="javascript:;" class="offer-item sm:row-span-2 offer-item-1c btn-group">
       <picture>
         <source media="(min-width: 609.98px)" srcset="img/offer/1c.png">
-        <img src="img/offer/1c-sm.png" alt="" class="absolute max-sm:left-1/2 max-sm:-translate-x-1/2 sm:right-0 top-0 sm:top-3">
+        <img src="img/offer/1c-sm.png" alt="" class="absolute top-0 max-sm:left-1/2 max-sm:-translate-x-1/2 sm:right-0 sm:top-3">
       </picture>
       <div class="offer-item-content">
-        <div class="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-5">Продукты 1С</div>
-        <button class="btn btn-primary btn-whitebg border border-default/10 shadow-md max-sm:w-full">
-          <span class="uppercase font-semibold">смотреть продукцию</span>
+        <div class="mb-3 text-xl font-semibold text-center sm:text-2xl sm:mb-5">Продукты 1С</div>
+        <button class="border shadow-md btn btn-primary btn-whitebg border-default/10 max-sm:w-full">
+          <span class="font-semibold uppercase">смотреть продукцию</span>
         </button>
       </div>
     </a>
     <a href="javascript:;" class="offer-item offer-item-virus btn-group">
       <img src="img/offer/virus.jpg" alt="" class="absolute-fit">
       <div class="offer-item-content">
-        <div class="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-5">Антивирусы</div>
-        <button class="btn btn-primary btn-whitebg border border-default/10 shadow-md max-sm:w-full">
-          <span class="uppercase font-semibold">смотреть продукцию</span>
+        <div class="mb-3 text-xl font-semibold text-center sm:text-2xl sm:mb-5">Антивирусы</div>
+        <button class="border shadow-md btn btn-primary btn-whitebg border-default/10 max-sm:w-full">
+          <span class="font-semibold uppercase">смотреть продукцию</span>
         </button>
       </div>
     </a>
     <a href="javascript:;" class="offer-item offer-item-equipment btn-group">
-      <img src="img/offer/equipment.png" alt="" class="absolute left-0 top-0">
+      <img src="img/offer/equipment.png" alt="" class="absolute top-0 left-0">
       <div class="offer-item-content">
-        <div class="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-5">Торговое оборудование</div>
-        <button class="btn btn-primary btn-whitebg border border-default/10 shadow-md max-sm:w-full">
-          <span class="uppercase font-semibold">смотреть продукцию</span>
+        <div class="mb-3 text-xl font-semibold text-center sm:text-2xl sm:mb-5">Торговое оборудование</div>
+        <button class="border shadow-md btn btn-primary btn-whitebg border-default/10 max-sm:w-full">
+          <span class="font-semibold uppercase">смотреть продукцию</span>
         </button>
       </div>
     </a>
     <a href="javascript:;" class="offer-item offer-item-other btn-group">
       <img src="img/offer/other.jpg" alt="" class="absolute-fit">
       <div class="offer-item-content">
-        <div class="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-5">Другое ПО</div>
-        <button class="btn btn-primary btn-whitebg border border-default/10 shadow-md max-sm:w-full">
-          <span class="uppercase font-semibold">смотреть продукцию</span>
+        <div class="mb-3 text-xl font-semibold text-center sm:text-2xl sm:mb-5">Другое ПО</div>
+        <button class="border shadow-md btn btn-primary btn-whitebg border-default/10 max-sm:w-full">
+          <span class="font-semibold uppercase">смотреть продукцию</span>
         </button>
       </div>
     </a>
@@ -249,27 +249,27 @@
 </section>
 
 <!-- Портфолио -->
-<section class="p-section bg-l3 overflow-hidden">
-  <div class="title mb-6 sm:mb-10">Портфолио</div>
+<section class="overflow-hidden p-section bg-l3">
+  <div class="mb-6 title sm:mb-10">Портфолио</div>
 
   <div class="relative">
     <div class="portfolio-slider swiper -mx-2 md:-mx-3.5 max-md:overflow-visible">
       <div class="swiper-wrapper">
         <% for(let i = 0; i < 10; i++) { %>
         <div class="swiper-slide w-60 md:w-1/2 lg:w-1/3 px-2 md:px-3.5">
-          <a href="javascript:;" class="portfolio-item btn-group">
+          <a href="javascript:;" class="h-full portfolio-item btn-group">
             <div class="portfolio-item-image">
               <img src="img/portfolio-sempl.png" alt="">
             </div>
             <div class="portfolio-item-content">
-              <div class="md:text-lg font-bold">
+              <div class="font-bold md:text-lg">
                 Разработка приложения и внедрение
                 CRM системы
               </div>
 
               <div class="mt-auto"></div>
-              <button class="btn btn-primary btn-whitebg border border-default/10 shadow-md max-sm:w-full mt-6">
-                <span class="uppercase font-semibold">подробнее</span>
+              <button class="mt-6 border shadow-md btn btn-primary btn-whitebg border-default/10 max-sm:w-full">
+                <span class="font-semibold uppercase">подробнее</span>
               </button>
             </div>
           </a>
@@ -278,13 +278,13 @@
       </div>
     </div>
 
-    <div class="absolute right-full top-1/2 -translate-y-1/2 mr-6 max-md:hidden">
-      <button class="btn btn-primary btn-whitebg mt-auto border border-default/10 rounded-full shadow-md btn-icon portfolio-slider-prev">
+    <div class="absolute mr-6 -translate-y-1/2 right-full top-1/2 max-md:hidden">
+      <button class="mt-auto border rounded-full shadow-md btn btn-primary btn-whitebg border-default/10 btn-icon portfolio-slider-prev">
         <c-icon class="icon" href="img/icons.svg#to-left"></c-icon>
       </button>
     </div>
-    <div class="absolute left-full top-1/2 -translate-y-1/2 ml-6 max-md:hidden">
-      <button class="btn btn-primary btn-whitebg mt-auto border border-default/10 rounded-full shadow-md btn-icon portfolio-slider-next">
+    <div class="absolute ml-6 -translate-y-1/2 left-full top-1/2 max-md:hidden">
+      <button class="mt-auto border rounded-full shadow-md btn btn-primary btn-whitebg border-default/10 btn-icon portfolio-slider-next">
         <c-icon class="icon" href="img/icons.svg#to-right"></c-icon>
       </button>
     </div>
@@ -292,7 +292,7 @@
 
   <div class="flex mt-8">
     <button class="btn btn-primary btn-fill sm:mx-auto">
-      <span class="uppercase font-semibold">ПОКАЗАТЬ ВСЕ</span>
+      <span class="font-semibold uppercase">ПОКАЗАТЬ ВСЕ</span>
     </button>
   </div>
 </section>
@@ -309,15 +309,15 @@
 <%= require('./html-includes/pray.html')() %>
 
 <!-- Наши клиенты -->
-<section class="p-section bg-l3 overflow-hidden">
-  <div class="title mb-6 sm:mb-10">Наши клиенты</div>
+<section class="overflow-hidden p-section bg-l3">
+  <div class="mb-6 title sm:mb-10">Наши клиенты</div>
 
 
   <div class="relative">
-    <div class="client-slider swiper -mx-2 md:-mx-3 max-md:overflow-visible">
+    <div class="-mx-2 client-slider swiper md:-mx-3 max-md:overflow-visible">
       <div class="swiper-wrapper">
         <% for(let i = 0; i < 10; i++) { %>
-        <div class="swiper-slide w-52 md:w-1/3 lg:w-1/4 px-2 md:px-3">
+        <div class="px-2 swiper-slide w-52 md:w-1/3 lg:w-1/4 md:px-3">
           <div class="client-item ratio ratio-[190/150] md:ratio-1/1">
             <div class="client-item-image absolute-fit">
               <img src="img/portfolio-sempl.png" alt="">
@@ -328,13 +328,13 @@
       </div>
     </div>
 
-    <div class="absolute right-full top-1/2 -translate-y-1/2 mr-6 max-md:hidden">
-      <button class="btn btn-primary btn-whitebg mt-auto border border-default/10 rounded-full shadow-md btn-icon client-slider-prev">
+    <div class="absolute mr-6 -translate-y-1/2 right-full top-1/2 max-md:hidden">
+      <button class="mt-auto border rounded-full shadow-md btn btn-primary btn-whitebg border-default/10 btn-icon client-slider-prev">
         <c-icon class="icon" href="img/icons.svg#to-left"></c-icon>
       </button>
     </div>
-    <div class="absolute left-full top-1/2 -translate-y-1/2 ml-6 max-md:hidden">
-      <button class="btn btn-primary btn-whitebg mt-auto border border-default/10 rounded-full shadow-md btn-icon client-slider-next">
+    <div class="absolute ml-6 -translate-y-1/2 left-full top-1/2 max-md:hidden">
+      <button class="mt-auto border rounded-full shadow-md btn btn-primary btn-whitebg border-default/10 btn-icon client-slider-next">
         <c-icon class="icon" href="img/icons.svg#to-right"></c-icon>
       </button>
     </div>
