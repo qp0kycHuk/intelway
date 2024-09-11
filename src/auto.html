@@ -121,26 +121,54 @@
 
 <!-- Наш опыт решения задач бизнеса -->
 
-<section class="p-section section-l2">
+<section class="p-section section-l2 overflow-hidden">
   <div class="mb-3 title sm:mb-6">Наш опыт решения задач бизнеса</div>
-  <div class="grid gap-2 sm:grid-cols-2 sm:gap-4 lg:gap-7">
-    <% for(let i = 0; i < 2; i++) { %>
-    <a href="javascript:;" class="service-item btn-group">
-      <div class="ratio ratio-[390/134]">
-        <img src="/img/portfolio-image.jpg" alt="" class="object-cover absolute-fit">
-      </div>
-      <div class="px-6 pt-6 sm:pt-9 pb-7 service-content">
-        <div class="mb-6 text-base font-bold leading-normal sm:text-lg">
-          Автоматизация интернет-магазина и обработки заказов у ИП Тарасенко С.В. на базе ПП "1С:Комплексная автоматизация, редакция 2"
+  <div class="relative">
+    <div class="-mx-2 expirience-slider swiper lg:-mx-3 max-lg:overflow-visible py-5 -my-5">
+      <div class="swiper-wrapper">
+        <% for(let i = 0; i < 6; i++) { %>
+        <div class="px-2 swiper-slide lg:px-3 w-80 xs:w-8/12 md:w-1/2">
+          <a href="javascript:;" class="service-item btn-group">
+            <div class="ratio ratio-[390/134]">
+              <img src="/img/portfolio-image.jpg" alt="" class="object-cover absolute-fit">
+            </div>
+            <div class="px-6 pt-6 sm:pt-9 pb-7 service-content">
+              <div class="mb-6 text-base font-bold leading-normal sm:text-lg">
+                Автоматизация интернет-магазина и обработки заказов у ИП Тарасенко С.В. на базе ПП "1С:Комплексная автоматизация, редакция 2"
+              </div>
+              <div class="flex mt-auto">
+                <button class="font-semibold uppercase border shadow-md btn btn-primary btn-whitebg border-default/10">подробнее</button>
+              </div>
+            </div>
+          </a>
         </div>
-        <div class="flex mt-auto">
-          <button class="font-semibold uppercase border shadow-md btn btn-primary btn-whitebg border-default/10">подробнее</button>
-        </div>
+        <% } %>
       </div>
-    </a>
-    <% } %>
+    </div>
+
+    <div class="absolute mr-6 -translate-y-1/2 right-full top-1/2 max-md:hidden z-[2]">
+      <button class="mt-auto border rounded-full shadow-md btn btn-primary btn-whitebg border-default/10 btn-icon expirience-slider-prev">
+        <c-icon class="icon" href="img/icons.svg#to-left"></c-icon>
+      </button>
+    </div>
+    <div class="absolute ml-6 -translate-y-1/2 left-full top-1/2 max-md:hidden z-[2]">
+      <button class="mt-auto border rounded-full shadow-md btn btn-primary btn-whitebg border-default/10 btn-icon expirience-slider-next">
+        <c-icon class="icon" href="img/icons.svg#to-right"></c-icon>
+      </button>
+    </div>
   </div>
 </section>
+<script>
+  new Swiper('.expirience-slider', {
+    slidesPerView: 'auto',
+    navigation: {
+      prevEl: '.expirience-slider-prev',
+      nextEl: '.expirience-slider-next',
+    }
+  })
+</script>
+
+
 <%= require('./html-includes/pray.html')() %>
 <%= require('./html-includes/map.html')() %>
 <%= require('./html-includes/footer.html')() %>
