@@ -137,18 +137,32 @@
 </section>
 
 <!-- Устройства для автоматизации -->
-<section class="p-section section-l2">
+<section class="p-section section-l2 overflow-hidden">
   <div class="title mb-3 sm:mb-6">Устройства для автоматизации</div>
   <div class="mb-6 sm:mb-10 max-sm:text-sm">
     Чтобы усовершенствовать работу склада, сделать риск ошибок минимальным, а скорость работы сотрудников максимальной,
     на помощь приходят следующие устройства:
   </div>
-  <div class="grid grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-7">
-    <% for(let i = 0; i < 3; i++) { %>
-    <%= require('./html-includes/service-item.html')() %>
-    <% } %>
-  </div>
+  <div class="relative">
+    <div class="-mx-2 equipment-slider swiper lg:-mx-3 max-lg:overflow-visible py-5 -my-5">
+      <div class="swiper-wrapper">
+        <% for(let i = 0; i < 6; i++) { %>
+        <div class="px-2 swiper-slide lg:px-3 w-80 xs:w-8/12 md:w-1/2 lg:w-1/3">
+          <%= require('./html-includes/service-item.html')() %>
+        </div>
+        <% } %>
+      </div>
+    </div>
 </section>
+<script>
+  new Swiper('.equipment-slider', {
+    slidesPerView: 'auto',
+    navigation: {
+      prevEl: '.expirience-slider-prev',
+      nextEl: '.expirience-slider-next',
+    }
+  })
+</script>
 
 <!-- Соответствие законодательству: -->
 <section class="p-section bg-l3">
