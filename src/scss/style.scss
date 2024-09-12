@@ -936,12 +936,21 @@ body {
   }
 }
 
+.dialog-product-text,
 .detail-text {
   // temp
 
-  h2 {
+  *:is(h1, h2, h3, h4, h5, h6) {
     font-size  : 24px;
     font-weight: 600;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 18px;
   }
 
   &>*+* {
@@ -960,5 +969,20 @@ body {
 
   ol {
     list-style: decimal;
+  }
+}
+
+.dialog-product-text {
+  ul {
+    list-style-type: '✓';
+
+    li {
+      padding-left: 8px;
+    }
+
+    li::marker {
+      color      : theme('colors.primary');
+      font-weight: 600;
+    }
   }
 }
