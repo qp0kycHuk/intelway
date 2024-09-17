@@ -15,11 +15,17 @@
           <div class="mb-2 font-semibold">Телефон для связи</div>
           <input type="tel" class="w-full input" placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _">
         </label>
-        <label class="flex items-center mb-4 cursor-pointer text-primary w-max">
-          <input class="hidden" type="file">
-          <c-icon class="mr-3 text-xl icon" href="img/icons.svg#file"></c-icon>
-          <div class="text-base font-semibold">Прикрепить резюме</div>
-        </label>
+        <div class="relative flex items-center gap-4 mb-6" data-file-wrapper>
+          <label class="flex items-center cursor-pointer text-primary" data-file-label>
+            <input class="hidden" data-file-input type="file">
+            <c-icon class="mr-3 text-xl icon" href="img/icons.svg#file"></c-icon>
+            <div class="w-full text-base font-semibold truncate max-w-40" data-file-text>Прикрепить резюме</div>
+          </label>
+          <button class="hidden p-0 text-2xl rounded-full btn btn-primary btn-fill size-auto" data-file-button type="button">
+            <c-icon class="pointer-events-none icon" href="img/icons.svg#cross-circle"></c-icon>
+          </button>
+          <div class="absolute left-0 hidden text-sm top-full text-red" data-file-error></div>
+        </div>
         <label class="block mb-8">
           <div class="mb-2 font-semibold">Ваше сообщение</div>
           <textarea class="w-full input"></textarea>

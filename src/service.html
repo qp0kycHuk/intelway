@@ -4,12 +4,15 @@
 <section class="pt-5 p-section bg-l3">
   <div class="mb-6 title sm:mb-10">Сопровождение 1С</div>
   <div class="relative overflow-hidden mb-7 sm:mb-10 lg:mb-16 rounded-4xl">
-    <img class="absolute inset-0 object-cover object-left w-full h-full" src="img/service-bg.jpg" alt="">
+    <picture>
+      <source media="(min-width: 599.98px)" srcset="img/service-bg.jpg">
+      <img class="absolute inset-0 object-cover sm:object-left size-full" src="img/service-bg-mobile.jpg" alt="">
+    </picture>
     <div class="relative px-4 py-8 sm:px-8 lg:px-16 lg:py-16">
       <div class="w-full max-w-[435px]">
         <div class="mb-4 text-xl font-semibold sm:text-2xl lg:text-3xl">Сопровождение 1С</div>
         <div class="mb-4 text-sm font-bold sm:text-base">Узнайте, как сделать ваш бизнес эффективнее</div>
-        <div class="mb-12 text-sm font-normal sm:text-base">
+        <div class="text-sm font-normal mb-52 sm:mb-12 sm:text-base">
           Повышайте эффективность бизнеса с нами! Станьте лидером своей отрасли вместе с решениями 1С! Не знаете с чего начать – напишите или позвоните нам!
         </div>
         <div class="flex">
@@ -49,10 +52,10 @@
   </div>
 </section>
 
-<section class="p-section section-l2 overflow-hidden relative">
-  <img src="img/lines-left.svg" alt="" class="absolute left-0 bottom-0">
+<section class="relative overflow-hidden p-section section-l2">
+  <img src="img/lines-left.svg" alt="" class="absolute bottom-0 left-0">
   <div class="relative">
-    <div class="title mb-8">
+    <div class="mb-8 title">
       Сервисы 1С:ИТС <br>
       для повышения эффективности работы
     </div>
@@ -60,16 +63,16 @@
       Сервисы 1С:ИТС — это дополнительные возможности программ 1С, которые экономят ваше время при ведении учета и взаимодействии с государственными информационными системами, сокращают количество ошибок, дают дополнительную информацию для решения различных задач. Сервисы включены в различные пакеты информационно-технологического сопровождения, также их можно приобретать отдельно.
     </div>
     <div class="relative">
-      <div class="-mx-2 products-slider swiper lg:-mx-3 max-lg:overflow-visible py-5 -my-5">
+      <div class="py-5 -mx-2 -my-5 products-slider swiper lg:-mx-3 max-lg:overflow-visible">
         <div class="swiper-wrapper">
           <% for(let i = 0; i < 4; i++) { %>
           <div class="px-2 swiper-slide lg:px-3 w-80 md:w-1/3 lg:w-1/4">
-            <a href="javascript:;" class="service-item btn-group p-4 pb-6 gap-6 shadow-md">
+            <a href="javascript:;" class="gap-6 p-4 pb-6 shadow-md service-item btn-group">
               <div class="ratio ratio-[258/148] rounded-2xl overflow-hidden">
                 <img src="img/service-test.png" alt="" class="object-cover absolute-fit">
               </div>
               <div class="service-item-content">
-                <div class="font-semibold sm:text-lg/xs mb-3">
+                <div class="mb-3 font-semibold sm:text-lg/xs">
                   1С:Контрагент
                 </div>
                 <div class="max-lg:text-sm">

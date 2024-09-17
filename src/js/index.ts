@@ -9,6 +9,7 @@ import ripple from '@qpokychuk/ripple'
 import swiper from './swiper'
 import ymaps from './ymaps'
 import animations from './animations'
+import fileHandler from './file-handler'
 
 import '../scss/index.scss'
 
@@ -31,6 +32,7 @@ function loadHandler() {
   swiper.init()
   ymaps.init()
   animations.init()
+  fileHandler.init()
 
   scrollHandler()
   document.addEventListener('toggleopen', toggleOpenHandler)
