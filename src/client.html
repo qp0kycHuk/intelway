@@ -1,42 +1,37 @@
 <%= require('./html-includes/header.html')() %>
 <%= require('./html-includes/breadcrumps.html')() %>
 
-<% var items = [
-  ['Руководителей', 'Бухгалтеров', 'Кадровиков', 'Делопроизводителей', 'Маркетологов', 'и многих других'],
-  [
-    ['Поставка лицензионного ПО', 'Техническая поддержка', 'Автоматизация бизнеса', 'Консультация и оптимизация IT', 'Интеграция и настройка ПО'],
-    ['Обучение персонала', 'Аудит и оптимизация бизнес-процессов', 'Разработка и внедрение систем учета и управления', 'Аналитика и тестирование', 'Мониторинг и обновление ПО']
-  ]
-] %>
-
 <section class="pt-5 p-section bg-l3">
   <div class="mb-6 title sm:mb-10">Клиентам</div>
-  <div class="mb-5 text-sm font-normal leading-normal sm:text-base sm:mb-9">
-    <span class="font-semibold">Специалисты компании “IntelWay” с 2015 года занимаются внедрением систем учета и управления предприятием</span> <br>
-    Уже 9 лет мы работаем для того, чтобы с помощью программных продуктов 1С делать более простым и эффективным труд:
+  <div class="mb-5 text-sm font-semibold leading-normal sm:text-base sm:mb-9">
+    Специальные предложения для наших постоянных клиентов:
   </div>
-  <div class="hidden grid-cols-3 gap-4 sm:grid lg:grid-cols-6 mb-11">
-    <% for(let i = 0; i < items[0].length; i++) { %>
-    <div class="h-[50px] bg-primary/10 rounded-lg flex items-center justify-center text-center px-4 text-primary text-base/none font-semibold"><%= items[0][i] %></div>
-    <% } %>
-  </div>
-  <div class="mb-6 text-2xl font-semibold leading-tight">Мы оказываем услуги:</div>
-  <div class="flex flex-col gap-3 md:gap-8 md:flex-row lg:gap-12 mb-7 sm:mb-10 lg:mb-15">
-    <% for(let i = 0; i < items[1].length; i++) { %>
-    <div class="flex flex-col gap-3">
-      <% for(let j = 0; j < items[1][i].length; j++) { %>
-      <div class="flex items-center">
-        <img class="mr-3 text-2xl sm:text-3xl icon" src="img/dolphin.png" alt="">
-        <div class="text-sm font-semibold sm:text-base"><%= items[1][i][j] %></div>
+  <div class="flex flex-col gap-4 mb-5 sm:gap-9 sm:mb-8">
+    <div class="flex xl:items-center">
+      <img class="mr-3 text-3xl icon" src="img/dolphin.png" alt="">
+      <div class="text-sm font-normal sm:text-base">
+        <span class="font-semibold">Бесплатная линия консультации для клиентов с подпиской ИТС Проф и Корп</span> <br>
+        Оказываем бесплатный консультации по типовым вопросам работы в 1С для всех наших клиентов с действующей подпиской 1С: ИТС Проф или Корп.
       </div>
-      <% } %>
     </div>
-    <% } %>
+    <div class="flex">
+      <img class="mr-3 text-3xl icon" src="img/dolphin.png" alt="">
+      <div class="flex flex-col">
+        <div class="mb-2 text-sm font-normal sm:text-base">
+          <span class="font-semibold">Приведи друга и получи подарок</span> <br>
+          Порекомендуйте нашу компанию своим друзьям и выберите подарок на выбор:
+        </div>
+        <ul class="pl-5 list-disc list-outside">
+          <li>2 часа работ специалиста</li>
+          <li>сертификат OZON или DNS  на 5% от суммы в чеке друга</li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <div class="mb-6 text-2xl font-semibold leading-tight">Информация для клиентов</div>
-  <div class="mb-5 text-sm font-normal leading-normal sm:text-base sm:mb-9">
-    Для наиболее эффективного выстраивания взаимодействия с Клиентом необходимо обладать как можно большими сведениями о его организации. Владение наиболее полной и точной контактной информацией позволит оперативно связываться с сотрудниками Клиента по различным каналам связи — чем больше этих каналов будет проработано, тем оперативнее будут произведены необходимые взаимодействия. Своевременно полученная наиболее полная и точная учетная информация об организации клиента позволит оперативно обмениваться документацией, не затрачивая дополнительный временной ресурс при ее отсутствии. Также существуют сведения, по которым обычно классифицируются Клиенты: они используются во всевозможных отчетах и обработках, по ним удобно сформировать выборку и сегментировать клиентов. <br><br>
-    Бывает, что на ранних стадиях работы с Клиентом или его контактным лицом, некоторая информация недоступна. Она становится известной со временем, по необходимости и по глубине взаимодействия с организацией. Зачастую у руководителя есть необходимость привести справочники к единообразию или получить о Клиенте или о группе Клиентов ту или иную информацию. Для этого 1C:CRM предоставляет возможность воспользоваться мастерами проверки клиентской базы. Их в решении два — «Контроль заполнения контактной информации» и «Контроль заполнения свойств клиентов».
+  <div class="px-4 py-6 mb-8 sm:px-8 bg-primary/10 rounded-3xl">
+    <div class="mb-1 text-lg font-semibold sm:text-2xl">Подарок предоставляется при оформлении другом заказа</div>
+    <div class="mb-6 text-sm font-normal sm:text-base">Отправьте заявку или свяжитесь с нами любым удобным для вас способом</div>
+    <button class="font-semibold uppercase btn btn-primary btn-fill" data-fancybox-modal data-type="ajax" data-src="dialog-feedback.html">отправить заявку</button>
   </div>
   <div class="mb-6 text-2xl font-semibold leading-tight">Частые вопросы</div>
   <div class="flex flex-col gap-3">
