@@ -16,10 +16,8 @@ const fileHandler = (event: Event): void => {
     error.innerText = warning
   }
 
-  if (
-    !['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'].includes(file.type)
-  ) {
-    typeHandler('Только pdf или word')
+  if (!['application/pdf'].includes(file.type)) {
+    typeHandler('Только в формате pdf')
   } else if (file.size > 2 * Math.pow(1024, 2)) {
     typeHandler('Размер не более 2 мб')
   } else {
