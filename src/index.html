@@ -32,7 +32,7 @@
     </div>
     <div class="w-full swiper-slide">
       <div class="started section">
-        <div class="overflow-hidden  absolute-fit">
+        <div class="overflow-hidden absolute-fit">
           <!-- started-gradient -->
           <div class="absolute-fit" style="background: linear-gradient(278deg, rgba(0, 0, 0, 0) 39.91%, rgba(0, 0, 0, 0.2) 100%),#EA6146;"></div>
 
@@ -59,7 +59,7 @@
     </div>
     <div class="w-full swiper-slide">
       <div class="started section">
-        <div class="overflow-hidden  absolute-fit">
+        <div class="overflow-hidden absolute-fit">
           <!-- started-gradient -->
           <div class="absolute-fit" style="background: linear-gradient(116.57deg, #C04549 16.67%, #E8BB47 100%);"></div>
 
@@ -97,7 +97,9 @@
   new Swiper('.started-slider', {
     slidesPerView: 'auto',
     loop: true,
+    grabCursor: true,
     effect: "creative",
+    speed: 1000,
     creativeEffect: {
       prev: {
         shadow: true,
@@ -111,7 +113,12 @@
       el: '.started-pagination',
       clickable: true,
       dynamicBullets: true
-    }
+    },
+    autoplay: {
+      delay: 4000,
+      stopOnLastSlide: false,
+      disableOnInteraction: false,
+    },
   })
 </script>
 
