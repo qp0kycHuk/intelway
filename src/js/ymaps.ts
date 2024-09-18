@@ -29,7 +29,7 @@ function mapsInit() {
         {},
         {
           iconLayout: 'default#image',
-          iconImageHref: '/img/map-point.png',
+          iconImageHref: '/local/templates/intelway/img/map-point.png',
           iconImageSize: [116, 116],
           iconImageOffset: [-(116 / 2), -116],
           hasBalloon: true,
