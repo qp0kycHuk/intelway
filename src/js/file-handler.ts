@@ -37,7 +37,7 @@ const fileRemove = (event: Event): void => {
 
   label.classList.remove('pointer-events-none', 'opacity-40')
   input.value = ''
-  text.innerText = 'Прикрепить резюме'
+  text.innerText = 'Прикрепить резюме (только pdf)'
   button.classList.add('hidden')
 }
 
